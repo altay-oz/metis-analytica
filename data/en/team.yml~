@@ -1,0 +1,56 @@
+############################### team ############################
+team:
+  enable : true
+  title : Our Team
+  team_member :
+    # team member loop
+    - name : Altay Özaygen
+      image_webp : images/team/altay.webp
+      image : images/team/altay.jpg
+      designation : Data analyst
+      content : Altay is an associated researcher at [Insitut-Mines Télécom Business School](https://www.imt-bs.eu), France where he also received his Phd. He is an expert in social network analysis, open innovation, patent analysis and management of innovation. Prior experience as a software developer, information security and system administrator.
+      social :
+        - icon : ti-briefcase
+          link : "https://orcid.org/0000-0001-5594-5245"
+        - icon : ti-linkedin
+          link : "https://linkedin.fr/altayoz"
+        - icon : ti-github
+          link : "https://github.com/altay-oz"
+
+    # team member loop
+    - name : Alberto Nonnis
+      image_webp : images/team/alberto.webp
+      image : images/team/alberto.jpg
+      designation : Econometrician
+      content : Alberto is a post-doctoral researcher in [Economics at Université Paris-Saclay](http://www.ritm.universite-paris-saclay.fr/).
+                He obtained his Ph.D in Economics from University of Cagliari, Italy. His
+                research interests are macroeconomics, monetary economics, DSGE modelling,
+                financial Markets, climate change economics and intangible capital.
+      social :
+        - icon : ti-briefcase
+          link : "https://orcid.org/0000-0002-8071-5895"
+        - icon : ti-linkedin
+          link : "https://www.linkedin.com/in/alberto-nonnis-597893a9/"
+        - icon : ti-world
+          link : "https://sites.google.com/view/albertononnis"
+        - icon : ti-bookmark
+          link : "http://www.ritm.universite-paris-saclay.fr/researchers/alberto-nonnis/"
+
+    # team member loop
+    - name : Keoungoui Kim
+      image_webp : images/team/kim.webp
+      image : images/team/kim.jpg
+      designation : Analyst
+      content : Keungoui is an assistant professor in [AI Convergence Institute at
+                Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. in Economics
+                from Seoul National University. He is an expert in patent analysis, data
+                science, natural language processing, and machine learning.
+      social :
+        - icon : ti-briefcase
+          link : "#"
+        - icon : ti-facebook 
+          link : "#"
+        - icon : ti-twitter-alt
+          link : "#"
+        - icon : ti-linkedin
+          link : "https://www.linkedin.com/in/keung-oui-kim-b8a731193/"

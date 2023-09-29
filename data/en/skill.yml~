@@ -1,0 +1,32 @@
+################################# Skill ##################################
+skill:
+  enable : true
+  title : Our Skills
+  subtitle : Our tool set.
+  content : Our primary tool set is free and open source software.
+  image : images/about/company-growth.webp
+  skill_item :
+    # skill item loop
+    - name :  Econometrics
+      percent : 100%
+
+    # skill item loop
+    - name :  Social network analysis
+      percent : 100%
+
+    # skill item loop
+    - name :  R and R/Shiny
+      percent : 95%
+
+    - name :  Stata
+      percent : 95%
+
+    # skill item loop
+    - name :  Python
+      percent : 70%
+      
+    # skill item loop
+    - name :  Deployment and system administration (GNU/Linux)
+      percent : 60%
+      
+      

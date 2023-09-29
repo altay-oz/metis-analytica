@@ -1,0 +1,27 @@
+############################# feature ###################################
+feature:
+  enable : true
+  image : images/about/about_business_net.jpg
+  image_webp : images/about/about_business_net.webp
+  title : We do consultancy with an academic edge.
+  content : ""
+  feature_item : 
+      # feature item loop
+    - title : Consultancy
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      content : We do data analysis and help you to set your business strategies.
+      
+      # feature item loop
+    - title : Data analysis for academic research
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      content : We have been there. We have extensive experience in research in management and economics.
+
+      # feature item loop
+    - title : Statistical patent analysis platform (coming soon)
+      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
+      content : A platform giving you all statistical patent intelligence at a fraction of cost.
+      
+      # feature item loop
+    - title : Open source
+      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
+      content : While we share some of our internal code we also provide you all data and the code used during the analysis in R, Python or in Stata. 

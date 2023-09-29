@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable : true
+  bg_image : "images/backgrounds/bg-white-wall.jpg"
+  bg_image_webp : "images/backgrounds/bg-white-wall.webp"
+  title : "Neat analysis without any fuss."
+  content : "Contact us to talk it through."
+  button:
+    enable : true
+    label : "Start a project with us"
+    link : "#contact"
