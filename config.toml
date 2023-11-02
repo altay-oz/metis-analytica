@@ -1,5 +1,6 @@
 ################################# Default configuration ###################
-baseURL = "https://metis-analytica.com"
+relativeURLs = true
+baseURL = ""
 title = "Metis Analytica"
 theme = "meghna-hugo"
 # post pagination
