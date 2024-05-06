@@ -3,30 +3,22 @@ skill:
   enable : true
   title : Our Skills
   subtitle : Our tool set.
-  content : Our primary tool set is free and open source software but we can also use Stata depending on your needs.
+  content : Our primary toolkit consists of free and open-source software, but we can also utilize Stata based on your requirements.
 #  image : images/about/company-growth.webp
   skill_item :
     # skill item loop
-    - name :  Econometrics
+    - name :  Data analysis
       percent : 100%
 
-    # skill item loop
+    - name :  Econometrics (R or Stata)
+      percent : 100%
+
     - name :  Social network analysis
       percent : 100%
 
-    # skill item loop
-    - name :  R and R/Shiny
+    - name :  Full stack development
       percent : 95%
 
-    - name :  Stata
-      percent : 95%
-
-    # skill item loop
-    - name :  Python
-      percent : 70%
-      
     # skill item loop
     - name :  Deployment and system administration (GNU/Linux)
-      percent : 60%
-      
-      
+      percent : 95%

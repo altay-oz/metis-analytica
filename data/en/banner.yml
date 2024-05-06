@@ -1,11 +1,11 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/backgrounds/metis_emacs_welcome.webp"
-  bg_image : "images/backgrounds/metis_emacs_welcome.jpg"
+  bg_image_webp : "images/backgrounds/bw_background.webp"
+  bg_image : "images/backgrounds/bw_background.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "Data driven decision making"
-  content : "Data analysis consultancy."
+  title : "Data driven innovation management"
+  content : "Data analysis consultancy"
   button:
     enable : true
     label : "Explore Us"

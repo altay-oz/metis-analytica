@@ -384,6 +384,14 @@ a:hover {
   display: inline-block;
 }
 
+
+.small-screen-logo {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .single-page-header {
   background-image: url("../images/about/about-header.jpg");
   background-size: cover;

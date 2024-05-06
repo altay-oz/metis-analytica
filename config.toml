@@ -1,7 +1,7 @@
 ################################# Default configuration ###################
 relativeURLs = true
 baseURL = ""
-title = "Metis Analytica"
+title = "metis analytica"
 theme = "meghna-hugo"
 # post pagination
 paginate = "5"
@@ -119,9 +119,9 @@ weight = 8
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "images/metis_logo.png"
 # Meta data
-description = "Data analysis consultancy"
+description = "Data driven innovation management"
 author = "Altay Özaygen"
 # Google Analytics
 google_analytics_id = "G-SHSYR2Z8QH" # Your ID
@@ -131,7 +131,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = false
-preloader = "images/logo.png"
+preloader = "images/metis_logo.png"
 
 # cookies
 [params.cookies]
