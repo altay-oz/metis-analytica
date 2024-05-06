@@ -41,16 +41,11 @@ team:
       image_webp : images/team/kim.webp
       image : images/team/kim.jpg
       designation : Analyst
-      content : Keungoui is an assistant professor in [AI Convergence Institute at
-                Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. in Economics
+      content : Keungoui is an professor in [AI Convergence Institute at Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. in Economics
                 from Seoul National University. He is an expert in patent analysis, data
                 science, natural language processing, and machine learning.
       social :
         - icon : ti-briefcase
           link : " https://orcid.org/0000-0002-0839-8813"
-        - icon : ti-facebook 
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
         - icon : ti-linkedin
           link : "https://www.linkedin.com/in/keung-oui-kim-b8a731193/"

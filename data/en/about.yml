@@ -5,12 +5,12 @@ about:
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
     title : Data analysis
-    content : Identification of value using econometrics and social network analysis.
+    content : Identification of value through econometrics and social network analysis.
 
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
     title : Statistical patent analysis
-    content : Set strategies on innovation.
+    content : Developing IP strategies for managing innovation.
 
   - icon : ti-unlock # themify icon pack : https://themify.me/themify-icons
     title : R, Python or Stata
-    content : We deliver all data with the analysis source code. We aim for the reproducibility.
+    content : We provide all data along with the analysis source code, aiming for reproducibility.
