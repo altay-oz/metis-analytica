@@ -465,10 +465,10 @@ a:hover {
 }
 
 .hero-area .block h1 {
-  font-size: 90px;
+  font-size: 70px;
   color: #fff;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -559,6 +559,7 @@ a:hover {
   width: 160px;
   height: 92.38px;
   background-color: transparent;
+  color: #71CC98;
   margin: 46.19px auto 60px;
   padding: 20px 0;
   border-left: 2px solid rgba(236, 239, 241, 0.07);
@@ -941,12 +942,13 @@ a:hover {
   border-left: 1px solid rgba(236, 239, 241, 0.07);
   border-top: 1px solid rgba(236, 239, 241, 0.07);
   margin-bottom: 40px;
-  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(175, 205, 215, 0.5);
 }
 
 .service-block .service-icon {
   margin-bottom: 10px;
   font-size: 50px;
+  color: #71CC98;
 }
 
 /*=================================================================
