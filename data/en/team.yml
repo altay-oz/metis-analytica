@@ -8,7 +8,7 @@ team:
       image_webp : images/team/altay.webp
       image : images/team/altay.jpg
       designation : Data analyst
-      content : Altay is an associated researcher at [Insitut-Mines Télécom Business School](https://www.imt-bs.eu), France where he also received his Phd. He is an expert in social network analysis, open innovation, patent analysis and management of innovation. Prior experience as a software developer, information security and system administrator.
+      content : Altay is an associate researcher at [Institut Mines-Télécom Business School](https://www.imt-bs.eu) in France, where he also received his Ph.D. He is an expert in social network analysis, open innovation, patent analysis, and the management of innovation. He has previous experience as a software developer, and system administrator.
       social :
         - icon : ti-briefcase
           link : "https://orcid.org/0000-0001-5594-5245"
@@ -22,10 +22,7 @@ team:
       image_webp : images/team/alberto.webp
       image : images/team/alberto.jpg
       designation : Econometrician
-      content : Alberto is a post-doctoral researcher in [Economics at Université Paris-Saclay](http://www.ritm.universite-paris-saclay.fr/).
-                He obtained his Ph.D in Economics from University of Cagliari, Italy. His
-                research interests are macroeconomics, monetary economics, DSGE modelling,
-                financial Markets, climate change economics and intangible capital.
+      content : Alberto is a post-doctoral researcher in [Economics at Université Paris-Saclay](http://www.ritm.universite-paris-saclay.fr/). He obtained his Ph.D. in Economics from the University of Cagliari, Italy. His research interests include macroeconomics, monetary economics, DSGE modeling, financial markets, climate change economics, and intangible capital.
       social :
         - icon : ti-briefcase
           link : "https://orcid.org/0000-0002-8071-5895"
@@ -41,9 +38,7 @@ team:
       image_webp : images/team/kim.webp
       image : images/team/kim.jpg
       designation : Analyst
-      content : Keungoui is an professor in [AI Convergence Institute at Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. in Economics
-                from Seoul National University. He is an expert in patent analysis, data
-                science, natural language processing, and machine learning.
+      content : Keungoui is an assitant professor in the School of [Applied Artificial Intelligence at Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. and Master’s degree in Economics from Seoul National University. His research interests are artificial intelligence, technology innovation and convergence, industry dynamics, and digitalisation.
       social :
         - icon : ti-briefcase
           link : " https://orcid.org/0000-0002-0839-8813"
