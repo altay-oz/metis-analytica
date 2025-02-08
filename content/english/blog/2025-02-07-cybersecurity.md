@@ -29,11 +29,10 @@ United States Patent and Trademark Office (USPTO) filed from 1995 to
   companies like Proofpoint and Expel are on the rise and may become
   key players in this landscape.
 
-Our analysis also delves into the role of patent data in
-decision-making for stakeholders, particularly in the context of
-mergers and acquisitions (M&A). We discussed the McAfee-FireEye
-merger, showcasing how leveraging patent metrics can maximize M&A
-outcomes.
+Our analysis examines the role of patent data in decision-making for
+stakeholders, particularly in the context of mergers and acquisitions
+(M&A). We discussed the McAfee-FireEye merger, showcasing how
+leveraging patent metrics can maximize M&A outcomes.
 
 ### Conclusion:
 
