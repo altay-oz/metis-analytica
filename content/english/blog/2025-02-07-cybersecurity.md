@@ -5,7 +5,7 @@ tags: [cybersecurity, technology landscape analysis, patents, metis-analytica]
 author: Altay Özaygen
 ---
 
-At metis-analytica, we are excited to share the findings from our
+At metis analytica, we are excited to share the findings from our
 latest research on the **technology landscape analysis of the
 cybersecurity sector**. With the increasing complexity of the digital
 landscape, cybersecurity remains a crucial element of modern
@@ -45,6 +45,6 @@ insights and enhance their innovation-driven growth.
 
 For a more in-depth look at our findings, you can download the full report [here](../../reports/metis-analytica_cybersecurity_v1.pdf).
 
-At metis-analytica, we are committed to helping organizations navigate
+At metis analytica, we are committed to helping organizations navigate
 evolving technological landscape. Contact us today to learn how we can
 assist you in technology landscape analysis.
