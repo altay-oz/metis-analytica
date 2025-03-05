@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/about_business_net.jpg
-  image_webp : images/about/about_business_net.webp
+  image : images/about/cybersecurity_net.jpg
+  image_webp : images/about/cybersecurity_net.webp
   title : Consultancy services with an academic approach.
   content : ""
   feature_item :
@@ -12,16 +12,16 @@ feature:
       content : We specialize in data-driven innovation management and offer assistance in formulating your business strategies.
 
       # feature item loop
-    - title : Data analysis for academic research
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : With extensive experience in research in management and economics, we are well-equipped to provide valuable insights and solutions tailored to your needs.
-
-      # feature item loop
     - title : Statistical patent analysis platform
       icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
       content : A platform offering comprehensive patent intelligence, providing valuable statistical insights at a fraction of the cost.
 
       # feature item loop
+    - title : Data analysis for academic research
+      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      content : With extensive experience in research in management and economics, we are well-equipped to provide valuable insights and solutions tailored to your needs.
+
+# feature item loop
     - title : Open source
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
       content : While we share some of our internal code, we also provide all the data and analysis code, available in R, Python, or Stata.

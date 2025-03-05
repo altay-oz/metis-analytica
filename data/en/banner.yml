@@ -5,8 +5,8 @@ banner:
   bg_image : "images/backgrounds/bw_background.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "Data driven innovation management"
-  content : "Data analysis consultancy"
+  content : "Enhancing innovation through statistical patent analysis for efficient navigation of the technological landscape."
   button:
     enable : true
     label : "Explore Us"
-    link : "#services"
+    link : "#about"

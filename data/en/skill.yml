@@ -7,6 +7,9 @@ skill:
 #  image : images/about/company-growth.webp
   skill_item :
     # skill item loop
+    - name :  Statistical patent analysis
+      percent : 100%
+
     - name :  Data analysis
       percent : 100%
 
@@ -16,9 +19,3 @@ skill:
     - name :  Social network analysis
       percent : 100%
 
-    - name :  Full stack development
-      percent : 95%
-
-    # skill item loop
-    - name :  Deployment and system administration (GNU/Linux)
-      percent : 95%
