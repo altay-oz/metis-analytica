@@ -1,6 +1,6 @@
 ############################### team ############################
 team:
-  enable : true
+  enable : false
   title : Our Team
   team_member :
     # team member loop
@@ -17,30 +17,3 @@ team:
         - icon : ti-github
           link : "https://github.com/altay-oz"
 
-    # team member loop
-    - name : Alberto Nonnis
-      image_webp : images/team/alberto.webp
-      image : images/team/alberto.jpg
-      designation : Econometrician
-      content : Alberto is a post-doctoral researcher in [Economics at Université Paris-Saclay](http://www.ritm.universite-paris-saclay.fr/). He obtained his Ph.D. in Economics from the University of Cagliari, Italy. His research interests include macroeconomics, monetary economics, DSGE modeling, financial markets, climate change economics, and intangible capital.
-      social :
-        - icon : ti-briefcase
-          link : "https://orcid.org/0000-0002-8071-5895"
-        - icon : ti-linkedin
-          link : "https://www.linkedin.com/in/alberto-nonnis-597893a9/"
-        - icon : ti-world
-          link : "https://sites.google.com/view/albertononnis"
-        - icon : ti-bookmark
-          link : "http://www.ritm.universite-paris-saclay.fr/researchers/alberto-nonnis/"
-
-    # team member loop
-    - name : Keoungoui Kim
-      image_webp : images/team/kim.webp
-      image : images/team/kim.jpg
-      designation : Analyst
-      content : Keungoui is an assitant professor in the School of [Applied Artificial Intelligence at Handong Global University](https://www.handong.edu/eng/), South Korea. He received his Ph.D. and Master’s degree in Economics from Seoul National University. His research interests are artificial intelligence, technology innovation and convergence, industry dynamics, and digitalisation.
-      social :
-        - icon : ti-briefcase
-          link : " https://orcid.org/0000-0002-0839-8813"
-        - icon : ti-linkedin
-          link : "https://www.linkedin.com/in/keung-oui-kim-b8a731193/"
