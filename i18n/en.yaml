@@ -1,0 +1,16 @@
+- id: blog_posts
+  translation: "Blog Posts"
+- id: section5_title
+  translation: "Drop us a line or two"
+- id: section5_subtitle
+  translation: "We'd love to hear from you"
+- id: section5_buttontext
+  translation: "Send Message"
+- id: section5_name_placeholder
+  translation: "Enter your name"
+- id: section5_email_placeholder
+  translation: "Enter your email address"
+- id: section5_subject_placeholder
+  translation: "Subject"
+- id: section5_message_placeholder
+  translation: "Your message..."

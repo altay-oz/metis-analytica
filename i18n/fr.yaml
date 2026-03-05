@@ -1,0 +1,16 @@
+- id: blog_posts
+  translation: "Articles de blog"
+- id: section5_title
+  translation: "Laissez-nous un petit mot"
+- id: section5_subtitle
+  translation: "Nous serions ravis de vous lire"
+- id: section5_buttontext
+  translation: "Envoyer le message"
+- id: section5_name_placeholder
+  translation: "Entrez votre nom"
+- id: section5_email_placeholder
+  translation: "Entrez votre adresse e-mail"
+- id: section5_subject_placeholder
+  translation: "Sujet"
+- id: section5_message_placeholder
+  translation: "Votre message..."

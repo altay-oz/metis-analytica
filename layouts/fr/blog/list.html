@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section is-medium">
+  <div class="container">
+
+    <div class="content">
+      <div class="columns is-centered">
+	<div class="column is-8">
+          <h1 class="title section-title">{{ i18n "blog_posts"}}</h1>
+	  <div class="divider"></div>
+	  <ul class="blog-list">
+            {{ range .Pages }}
+            <li class="blog-post">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>, 
+              <small>{{ .Date | time.Format ":date_long"}}</small>
+            </li>
+            {{ end }}
+	  </ul>
+  	</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "footer.html" . }}
+{{ end }}

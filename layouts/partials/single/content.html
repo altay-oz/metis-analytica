@@ -1,0 +1,60 @@
+<section class="section is-medium">
+  <div class="container">
+
+    <div class="content">
+      <div class="columns is-centered">
+	<div class="column is-8">
+          <h1 class="title section-title">{{ .Title }}</h1>
+
+	  {{ if .Params.Subtitle }}
+                  <h5 class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</h5>
+	  {{ end }}
+
+	  <h5 class="subtitle is-muted" style="margin-top: 20px;">{{ .Params.Author }}</h5>
+
+	  {{ if .Date }}
+        	  <h5 class="subtitle is-muted">{{ .Date | time.Format ":date_long"}}</h5>
+		  {{ end }}
+
+	  <div class="divider" style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+	  {{ .Content }}
+
+	  <div class="buttons" style="margin-top: 20px; margin-bottom: 20px;"></div>
+	    <!-- Facebook -->
+	    <a class="button is-small is-rounded" 
+	       href="https://facebook.com/sharer/sharer.php?u={{ .Permalink | absLangURL }}" target="_blank" rel="noopener">
+	      <span class="icon is-small">
+		{{ readFile "themes/bulma/docs/vendor/fontawesome-free-5.15.2-web/svgs/brands/facebook.svg" | safeHTML }}
+	      </span>
+	    </a>
+
+	    <!-- Twitter -->
+	    <a class="button is-small is-rounded" 
+	       href="https://twitter.com/intent/tweet/?text={{ .Title }}&amp;url={{ .Permalink | absLangURL }}" target="_blank" rel="noopener">
+	      <span class="icon is-small">
+		{{ readFile "themes/bulma/docs/vendor/fontawesome-free-5.15.2-web/svgs/brands/twitter.svg" | safeHTML }}
+	    </a>
+
+	    <!-- Email -->
+	    <a class="button is-small is-rounded"
+	       href="mailto:?subject={{ .Title }}&amp;body={{ .Permalink | absLangURL }}" target="_self" rel="noopener">
+	      <span class="icon is-small">
+		{{ readFile "themes/bulma/docs/vendor/fontawesome-free-5.15.2-web/svgs/solid/envelope.svg" | safeHTML }}
+	      </span>
+	    </a>
+
+	    <!-- LinkedIn -->
+	    <a class="button is-small is-rounded"
+	       href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | absLangURL }}" target="_self" rel="noopener">
+	      <span class="icon is-small">
+		{{ readFile "themes/bulma/docs/vendor/fontawesome-free-5.15.2-web/svgs/brands/linkedin.svg" | safeHTML }}
+	      </span>
+	    </a>
+
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</section>

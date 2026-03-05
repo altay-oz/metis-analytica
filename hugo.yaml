@@ -1,0 +1,340 @@
+baseURL: https://metis-analytica.com/
+languageCode: en
+title: metis analytica
+
+theme: 'hugo-fresh'
+
+googleAnalytics: G-SHSYR2Z8QH # Put in your tracking code without quotes
+# Disables warnings
+disableKinds:
+- taxonomy
+- term
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content/
+    title: metis analytica
+    params:
+      flag: 🇺🇸
+      description: metis analytica is a firm specialized in technology landscape analysis
+      # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+      openGraph: true
+      # Used as meta data; describe your site to make Google Bots happy
+      description: metis analytica is a firm specialized in technology landscape analysis
+      # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+      # preloader: false
+      navbarlogo:
+      # Logo (from static/images/logos/___)
+        image: logos/metisheader.png
+        link: /
+        width: 170
+        height: 56
+      font:
+        name: "Inria Sans"
+        sizes: [400,600]
+      hero:
+        # Main hero title
+        title: Technology landscape analysis made easy
+        # Hero subtitle (optional)
+        subtitle: Statistical patent analysis for efficient navigation of the technology landscape
+        # Button text
+        buttontext: Get started
+        # Where the main hero button links to
+        buttonlink: "#section3"
+        # Hero image (from static/images/___)
+        image: metis_main.svg
+        # Footer logos (from static/images/logos/clients/*.svg)
+        # urls are optional
+        clientlogos:
+        - logo: eotec
+          url: https://www.eotecdev.net/
+        - logo: retina
+          url: https://www.retinadata.com/
+      # Customizable navbar. For a dropdown, add a "sublinks" list.
+      navbar:
+      - title: services
+        url: /#section2
+      - title: product
+        sublinks:
+        - title: TechLand
+          url: /#section3
+        - title: TechLand features
+          url: /techlandfeatures
+        - title: Our roadmap
+          url: /roadmap
+      - title: pricing
+        url: /#section1
+      - title: blog
+        url: /blog
+      - title: contact
+        url: /#section5
+      - title: français
+        url: /fr/
+        button: false
+      section1:
+        title: Choose the perfect plan
+        subtitle: for your innovation strategy
+        tiles:
+          - title: Free
+            icon: mouse-globe
+            plantitle: Discover TechLand
+            text:
+              - Statistical overview
+              - List patents
+              - Complete search
+              - GDPR compliant
+              - All updates included
+              - Monthly digest (peaceful pace)
+            buttonText: Coming soon
+          - title: Research
+            icon: laptop-globe
+            plantitle: Everything in Free, plus;
+            text:
+              - Citation network analysis
+              - AI summary
+              - Save your search
+              - Data export
+              - Email support
+              - Monthly meeting
+            url: https://linkedin.com/company/metis-analytica/
+            buttonText: Contact us
+          - title: Business
+            icon: plug-cloud
+            plantitle: Everything in Research, plus;
+            text:
+              - Cluster analysis
+              - M&A tool
+              - AI chatbot
+              - AI generated report doc
+              - Sub-domain
+              - Phone support
+            url: https://linkedin.com/company/metis-analytica/
+            buttonText: Contact us
+      section2:
+        title: Services
+        subtitle: We offer a suite of services designed to help you transform your intellectual property and innovation strategy into a core competitive advantage.
+        features:
+        - title: Technological Landscape Analysis via TechLand
+          text: Our expertise in statistical patent analysis helps you navigate the technological landscape. With TechLand we provide valuable insights that enable you to shape innovation strategies, make informed investment decisions, evaluate M&A opportunities, and identify market shifts. Ultimately, by providing valuable insights, we empower you to refine your strategy and optimize your investments, leading to more effective resource allocation.
+          # icon: laptop-globe
+        - title: Training for Capacity Building
+          text: We go beyond consultancy by empowering your team directly. Our workshops and initiatives are designed to integrate advanced tools like machine learning, natural language processing, and social network analysis into their decision-making processes. We also provide IP management and strategy courses to equip your team with the knowledge and skills needed to effectively manage your intellectual property assets.
+          # icon: doc-sync
+        - title: Professional Services with Customized Analytics
+          text: For unique needs, we develop powerful, interactive dashboards tailored to your innovation initiatives. These dashboards allow you to track the success of your efforts and monitor multi-parameter ecosystems. This ensures you can continuously adjust your strategies based on comprehensive data insights, maximizing the impact of your innovation efforts.
+          # icon: mobile-feed
+          # - title: TechLand Support and Maintenance Services
+          #   text: We offer next business day support, subdomain, dedicated cloud deployment and provisioning, commissioning.
+          #   icon: mobile-feed
+      section3:
+        title: TechLand
+        subtitle: Navigate the technology landscape
+        image: techland_main_page.png
+        buttonText: Get features
+        buttonLink: "/techlandfeatures"
+      # section4:
+      #   title: Our Clients love us!
+      #   subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+      #   clients:
+      #   - name: Irma Walters
+      #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      #     job: Accountant
+      #     img: 1
+      #   - name: John Bradley
+      #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      #     job: Financial Analyst
+      #     img: 2
+      #   - name: Gary Blackman
+      #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      #     job: HR Manager
+      #     img: 3
+      section5:
+        title: Contact Us
+        subtitle: Let us know how we can help
+        buttonText: Send Message
+        action: https://formspree.io/f/xoqrargo
+        method: POST
+      footer:
+        # Logo (from static/images/logos/___)
+        logo: metisheader.png
+        # Social Media Title
+        socialmediatitle: Follow Us
+        # Social media links (GitHub, Twitter, etc.). All are optional.
+        # Icons are from Font Awesome
+        socialmedia:
+        - link: https://linkedin.com/company/metis-analytica/
+          icon: linkedin
+        # - link: https://discord.com/techland
+        #   icon: discord
+        bulmalogo: false
+        quicklinks:
+          column1:
+            title: "Product"
+            links:
+            - text: TechLand
+              link: /#section3
+            - text: TechLand features
+              link: /techlandfeatures
+            - text: Our roadmap
+              link: /roadmap
+          # column2:
+          #   title: "Docs"
+          #   links:
+          #   - text: Get started
+          #     link: /
+          #   - text: User guides
+          #     link: /
+          #   - text: Admin guide
+          #     link: /
+          #   - text: Developers
+          #     link: /
+          column3:
+            title: "Blog"
+            links:
+            - text: All
+              link: /blog
+            - text: Latest
+              link: /blog/2026-03-02-cybersecurity
+  fr:
+    languageName: Français
+    weight: 2
+    contentDir: content/fr
+    title: metis analytica
+    params:
+      flag: 🇫🇷
+      description: metis analytica est une société spécialisée dans l'analyse des paysages technologiques
+      navbarlogo:
+        image: logos/metisheader.png
+        link: /fr/
+        width: 170
+        height: 56
+      font:
+        name: "Inria Sans"
+        sizes: [400,600]
+      hero:
+        title: Simplifier l’analyse du paysage technologique
+        subtitle: Analyse statistique des brevets pour une navigation efficace dans le paysage technologique
+        buttonText: Démarrer
+        buttonlink: "#section3"
+        image: metis_main.svg
+        clientlogos:
+        - logo: eotec
+          url: https://www.eotecdev.net/
+        - logo: retina
+          url: https://www.retinadata.com/
+      navbar:
+      - title: services
+        url: /fr/#section2
+      - title: produit
+        sublinks:
+        - title: TechLand
+          url: /fr/#section3
+        - title: Les fonctionalités de TechLand
+          url: /fr/fonctionalites
+        - title: Feuille de route
+          url: /fr/feuillederoute
+      - title: forfaits
+        url: /fr/#section1
+      - title: blog
+        url: /fr/blog
+      - title: contact
+        url: /fr/#section5
+      - title: english
+        url: /
+        button: false
+      section1:
+        title: Le forfait parfait
+        subtitle: pour votre stratégie d'innovation
+        tiles:
+          - title: Free
+            icon: mouse-globe
+            plantitle: Découvrez TechLand
+            text:
+              - Aperçu statistique
+              - Liste des brevets
+              - Recherche complète
+              - Conforme RGPD
+              - Toutes les mises à jour
+              - Résumé mensuel (rythme doux)
+            buttonText: Bientôt disponible
+          - title: Recherche
+            icon: laptop-globe
+            plantitle: Tout ce qui est dans Free, plus ;
+            text:
+              - Analyse des réseaux de citations
+              - Résumé IA
+              - Sauvegarde
+              - Export de données
+              - Support par email
+              - Réunion mensuelle
+            url: https://linkedin.com/company/metis-analytica/
+            buttonText: Contactez-nous
+          - title: Entreprise
+            icon: plug-cloud
+            plantitle: Tout ce qui est dans Recherche, plus ;
+            text:
+              - Analyse de clusters
+              - Outil M&A
+              - Chatbot IA
+              - Rapport IA généré
+              - Sous-domaine
+              - Support téléphonique
+            url: https://linkedin.com/company/metis-analytica/
+            buttonText: Contactez-nous
+      section2:
+        title: Services
+        subtitle: Nous proposons une gamme de services conçus pour vous aider à transformer votre stratégie de propriété intellectuelle et d’innovation en un avantage concurrentiel clé.
+        features:
+        - title: Analyse du paysage technologique avec TechLand
+          text: Notre expertise en analyse statistique des brevets vous aide à naviguer dans le paysage technologique. Avec TechLand, nous fournissons des informations précieuses qui vous permettent de définir des stratégies d’innovation, de prendre des décisions d’investissement éclairées, d’évaluer les opportunités de fusions-acquisitions et d’identifier les évolutions du marché. En fin de compte, en fournissant ces insights stratégiques, nous vous donnons les moyens d’affiner votre stratégie et d’optimiser vos investissements, pour une allocation des ressources plus efficace.
+        - title: Formation pour le renforcement des compétences
+          text: Nous allons au-delà du conseil en donnant à votre équipe les moyens d’agir directement. Nos ateliers et initiatives sont conçus pour intégrer des outils avancés tels que l’apprentissage automatique, le traitement du langage naturel et l’analyse des réseaux sociaux dans leurs processus de prise de décision. Nous proposons également des cours de gestion et de stratégie de propriété intellectuelle pour équiper votre équipe des connaissances et compétences nécessaires à une gestion efficace de vos actifs intellectuels.
+        - title: Services professionnels avec analyses personnalisées
+          text: Pour des besoins spécifiques, nous développons des tableaux de bord interactifs puissants, adaptés à vos initiatives d’innovation. Ces tableaux de bord vous permettent de suivre le succès de vos efforts et de surveiller des écosystèmes multi-paramètres. Cela vous assure d’ajuster continuellement vos stratégies sur la base d’analyses de données complètes, maximisant l’impact de vos initiatives d’innovation.
+      section3:
+        title: TechLand
+        subtitle: Explorer le paysage technologique
+        image: techland_main_page.png
+        buttonText: Découvrir les fonctionnalités
+        buttonLink: "/fr/fonctionalites"
+      section5:
+        title: Contactez-nous
+        subtitle: Dites‑nous comment nous pouvons vous aider
+        buttonText: Envoyer un message
+        action: https://formspree.io/f/xoqrargo
+        method: POST
+      footer:
+        logo: metisheader.png
+        socialmediatitle: Suivez-nous
+        socialmedia:
+        - link: https://linkedin.com/company/metis-analytica/
+          icon: linkedin
+        # - link: https://discord.com/techland
+        #   icon: discord
+        bulmalogo: false
+        quicklinks:
+          column1:
+            title: "Produit"
+            links:
+            - text: TechLand
+              link: /fr/#section3
+            - text: Les fonctionalités de TechLand
+              link: /fr/fonctionalites
+            - text: Plan d'action
+              link: /fr/feuillederoute
+          column3:
+            title: "Blog"
+            links:
+            - text: Liste
+              link: /fr/blog
+            - text: Le dernier
+              link: /fr/blog/2026-03-02-cybersecurite
