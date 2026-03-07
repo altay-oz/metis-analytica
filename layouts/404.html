@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title">404</h1>
+
+    <div id="msg-en">
+      <h2 class="subtitle">Page not found</h2>
+      <p class="mb-5">The page you are looking for doesn't exist.</p>
+      <a href="/" class="button primary-btn">Go back home</a>
+    </div>
+
+    <div id="msg-fr" style="display:none">
+      <h2 class="subtitle">Page introuvable</h2>
+      <p class="mb-5">La page que vous cherchez n'existe pas.</p>
+      <a href="/fr/" class="button primary-btn">Retour à l'accueil</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // If the URL that 404'd was under /fr/ show French message
+  const referrer = document.referrer;
+  const path = window.location.href;
+
+  if (referrer.includes('/fr/') || path.includes('/fr/')) {
+    document.getElementById('msg-en').style.display = 'none';
+    document.getElementById('msg-fr').style.display = 'block';
+  }
+</script>
+{{ end }}
