@@ -1,6 +1,20 @@
 - id: blog_posts
   translation: "Articles de blog"
 - id: section5_title
+  translation: "Parlons stratégie"
+- id: section5_subtitle
+  translation: "Parlez-nous de votre défi en matière d'intelligence technologique"
+- id: section5_name_placeholder
+  translation: "Votre nom"
+- id: section5_email_placeholder
+  translation: "Votre email"
+- id: section5_subject_placeholder
+  translation: "Sujet"
+- id: section5_message_placeholder
+  translation: "Votre message"
+- id: section5_buttontext
+  translation: "Envoyer le message"
+- id: section5_title
   translation: "Laissez-nous un petit mot"
 - id: section5_subtitle
   translation: "Nous serions ravis de vous lire"

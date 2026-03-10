@@ -9,6 +9,7 @@ Section Styles
     }
     &.section-feature-grey {
         background-color: $section-grey;
+	min-height: 100vh;
     }
     &.section-secondary {
         background-color: $secondary;
@@ -29,11 +30,10 @@ Section Styles
 
 //Titles
 .title-wrapper {
-    max-width: 500px;
+    max-width: 950px;
     margin: 0 auto;
     .title, .subtitle {
         font-family: 'Open Sans', sans-serif;
-
     }
     .subtitle {
         &.is-muted {
@@ -62,6 +62,8 @@ Section Styles
 //Pulled image
 img.pushed-image {
     margin-top: -5vh;
+    max-height: 55vh;
+    width: auto;
 }
 
 //Icon box

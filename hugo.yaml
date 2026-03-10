@@ -25,7 +25,7 @@ languages:
     title: metis analytica
     params:
       flag: 🇺🇸
-      description: metis analytica is a firm specialized in technology landscape analysis
+      description: TechLand — the strategic intelligence tool decision-makers have been missing. Build, defend, and adjust your technology roadmap with evidence-based patent intelligence.
       # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
       openGraph: true
       # Used as meta data; describe your site to make Google Bots happy
@@ -42,15 +42,10 @@ languages:
         name: "Inria Sans"
         sizes: [400,600]
       hero:
-        # Main hero title
-        title: Technology landscape analysis made easy
-        # Hero subtitle (optional)
-        subtitle: Statistical patent analysis for efficient navigation of the technology landscape
-        # Button text
-        buttontext: Get started
-        # Where the main hero button links to
+        title: The strategic intelligence tool<br>decision-makers have been missing
+        subtitle: Build, defend, and adjust your technology roadmap with confidence — backed by patent intelligence, not instinct
+        buttontext: See how it works
         buttonlink: "#section3"
-        # Hero image (from static/images/___)
         image: metis_main.svg
         # Footer logos (from static/images/logos/clients/*.svg)
         # urls are optional
@@ -81,65 +76,72 @@ languages:
         url: /fr/
         button: false
       section1:
-        title: Choose the perfect plan
-        subtitle: for your innovation strategy
+        title: Choose your plan
+        subtitle: built for every stage of your innovation strategy
         tiles:
           - title: Free
             icon: mouse-globe
-            plantitle: Discover TechLand
+            plantitle: Explore TechLand
             text:
-              - Statistical overview
-              - List patents
-              - Complete search
+              - Statistical overview of any technology field
+              - Full patent search and results
               - GDPR compliant
               - All updates included
-              - Monthly digest (peaceful pace)
+              - Monthly digest
             buttonText: Coming soon
           - title: Research
             icon: laptop-globe
-            plantitle: Everything in Free, plus;
+            plantitle: Everything in Free, plus
             text:
               - Citation network analysis
-              - AI summary
-              - Save your search
-              - Data export
+              - AI-generated summaries
+              - Save and share searches
+              - Data export to Excel and CSV
               - Email support
-              - Monthly meeting
+              - Monthly strategy call
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contact us
           - title: Business
             icon: plug-cloud
-            plantitle: Everything in Research, plus;
+            plantitle: Everything in Research, plus
             text:
-              - Cluster analysis
-              - M&A tool
-              - AI chatbot
-              - AI generated report doc
-              - Sub-domain
-              - Phone support
+              - Cluster analysis and white-space detection
+              - M&A target assessment
+              - AI chatbot for search refinement
+              - AI-generated Word reports
+              - Dedicated sub-domain
+              - Priority phone support
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contact us
       section2:
         title: Services
-        subtitle: We offer a suite of services designed to help you transform your intellectual property and innovation strategy into a core competitive advantage.
+        subtitle: The right level of support for every stage of your technology strategy.
         features:
-        - title: Technological Landscape Analysis via TechLand
-          text: Our expertise in statistical patent analysis helps you navigate the technological landscape. With TechLand we provide valuable insights that enable you to shape innovation strategies, make informed investment decisions, evaluate M&A opportunities, and identify market shifts. Ultimately, by providing valuable insights, we empower you to refine your strategy and optimize your investments, leading to more effective resource allocation.
-          # icon: laptop-globe
-        - title: Training for Capacity Building
-          text: We go beyond consultancy by empowering your team directly. Our workshops and initiatives are designed to integrate advanced tools like machine learning, natural language processing, and social network analysis into their decision-making processes. We also provide IP management and strategy courses to equip your team with the knowledge and skills needed to effectively manage your intellectual property assets.
-          # icon: doc-sync
-        - title: Professional Services with Customized Analytics
-          text: For unique needs, we develop powerful, interactive dashboards tailored to your innovation initiatives. These dashboards allow you to track the success of your efforts and monitor multi-parameter ecosystems. This ensures you can continuously adjust your strategies based on comprehensive data insights, maximizing the impact of your innovation efforts.
-          # icon: mobile-feed
-          # - title: TechLand Support and Maintenance Services
-          #   text: We offer next business day support, subdomain, dedicated cloud deployment and provisioning, commissioning.
-          #   icon: mobile-feed
+        - title: TechLand — Strategic Technology Intelligence
+          text: TechLand gives you a precise, evidence-based picture of any technology
+                landscape — who owns what, where the field is heading, and where the
+                white-space  spaces are. Built on PATSTAT and DOCDB, refreshed weekly,
+                and designed for decision-makers who need reliable, reproducible analysis
+                they can act on. Whether you are shaping your R&D agenda, evaluating an
+                acquisition target, or mapping your innovation position, TechLand gives
+                you the intelligence to make the right call — independently, at your own pace.
+        - title: Consultancy — Expert Support When You Need It
+          text: Not every organisation needs the same level of support. Some clients know
+                exactly what they are looking for and use TechLand independently. Others
+                need help interpreting results, translating findings into strategic
+                recommendations, or running the analysis jointly. We adapt to your needs —
+                from a one-off interpretation session to a full joint analysis engagement
+                where we work alongside your team, shape the strategic implications together,
+                and transfer the capability so you can continue independently. All engagements
+                are conducted under NDA, with one client per sector at a time — so your
+                strategic intelligence stays exclusively yours.
       section3:
         title: TechLand
-        subtitle: Navigate the technology landscape
+        subtitle: The strategic intelligence tool decision-makers have been missing — built
+                  on PATSTAT and DOCDB, refreshed weekly, covering over 80 million granted
+                  patents across all major offices
         image: techland_main_page.png
-        buttonText: Get features
+        buttonText: See all features
         buttonLink: "/techlandfeatures"
       # section4:
       #   title: Our Clients love us!
@@ -158,8 +160,8 @@ languages:
       #     job: HR Manager
       #     img: 3
       section5:
-        title: Contact Us
-        subtitle: Let us know how we can help
+        title: Let's talk strategy
+        subtitle: Tell us about your technology intelligence challenge
         buttonText: Send Message
         action: https://formspree.io/f/xoqrargo
         method: POST
@@ -211,7 +213,7 @@ languages:
     title: metis analytica
     params:
       flag: 🇫🇷
-      description: metis analytica est une société spécialisée dans l'analyse des paysages technologiques
+      description: TechLand — l’outil d’intelligence stratégique enfin accessible aux décideurs. Construisez et défendez votre feuille de route technologique grâce à l’analyse des brevets.
       navbarlogo:
         image: logos/metisheader.png
         link: /fr/
@@ -221,9 +223,9 @@ languages:
         name: "Inria Sans"
         sizes: [400,600]
       hero:
-        title: Simplifier l’analyse du paysage technologique
-        subtitle: Analyse statistique des brevets pour une navigation efficace dans le paysage technologique
-        buttonText: Démarrer
+        title: L'outil d'intelligence stratégique<br>qui manquait aux décideurs
+        subtitle: Construisez, défendez et ajustez votre feuille de route technologique en toute confiance — fondée sur l’intelligence brevets, et non sur l’intuition.
+        buttonText: Découvrir
         buttonlink: "#section3"
         image: metis_main.svg
         clientlogos:
@@ -238,8 +240,8 @@ languages:
         sublinks:
         - title: TechLand
           url: /fr/#section3
-        - title: Les fonctionalités de TechLand
-          url: /fr/fonctionalites
+        - title: Les fonctionnalités de TechLand
+          url: /fr/fonctionnalites
         - title: Feuille de route
           url: /fr/feuillederoute
       - title: forfaits
@@ -252,64 +254,80 @@ languages:
         url: /
         button: false
       section1:
-        title: Le forfait parfait
-        subtitle: pour votre stratégie d'innovation
+        title: Choisissez votre forfait
+        subtitle: conçu pour chaque étape de votre stratégie d'innovation
         tiles:
           - title: Free
             icon: mouse-globe
             plantitle: Découvrez TechLand
             text:
-              - Aperçu statistique
-              - Liste des brevets
-              - Recherche complète
+              - Aperçu statistique de tout domaine technologique
+              - Recherche complète et liste des brevets
               - Conforme RGPD
-              - Toutes les mises à jour
-              - Résumé mensuel (rythme doux)
+              - Toutes les mises à jour incluses
+              - Résumé mensuel
             buttonText: Bientôt disponible
           - title: Recherche
             icon: laptop-globe
-            plantitle: Tout ce qui est dans Free, plus ;
+            plantitle: Tout ce qui est dans Free, plus
             text:
               - Analyse des réseaux de citations
-              - Résumé IA
-              - Sauvegarde
-              - Export de données
+              - Résumés générés par IA
+              - Sauvegarde et partage des recherches
+              - Export des données en Excel et CSV
               - Support par email
-              - Réunion mensuelle
+              - Appel stratégique mensuel
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contactez-nous
           - title: Entreprise
             icon: plug-cloud
-            plantitle: Tout ce qui est dans Recherche, plus ;
+            plantitle: Tout ce qui est dans Recherche, plus
             text:
-              - Analyse de clusters
-              - Outil M&A
-              - Chatbot IA
-              - Rapport IA généré
-              - Sous-domaine
-              - Support téléphonique
+              - Analyse de clusters et détection de white space
+              - Évaluation de cibles de fusion-acquisition
+              - Chatbot IA pour affiner les recherches
+              - Rapports Word générés par IA
+              - Sous-domaine dédié
+              - Support téléphonique prioritaire
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contactez-nous
       section2:
         title: Services
-        subtitle: Nous proposons une gamme de services conçus pour vous aider à transformer votre stratégie de propriété intellectuelle et d’innovation en un avantage concurrentiel clé.
+        subtitle: Le niveau d'accompagnement adapté à chaque étape de votre stratégie technologique.
         features:
-        - title: Analyse du paysage technologique avec TechLand
-          text: Notre expertise en analyse statistique des brevets vous aide à naviguer dans le paysage technologique. Avec TechLand, nous fournissons des informations précieuses qui vous permettent de définir des stratégies d’innovation, de prendre des décisions d’investissement éclairées, d’évaluer les opportunités de fusions-acquisitions et d’identifier les évolutions du marché. En fin de compte, en fournissant ces insights stratégiques, nous vous donnons les moyens d’affiner votre stratégie et d’optimiser vos investissements, pour une allocation des ressources plus efficace.
-        - title: Formation pour le renforcement des compétences
-          text: Nous allons au-delà du conseil en donnant à votre équipe les moyens d’agir directement. Nos ateliers et initiatives sont conçus pour intégrer des outils avancés tels que l’apprentissage automatique, le traitement du langage naturel et l’analyse des réseaux sociaux dans leurs processus de prise de décision. Nous proposons également des cours de gestion et de stratégie de propriété intellectuelle pour équiper votre équipe des connaissances et compétences nécessaires à une gestion efficace de vos actifs intellectuels.
-        - title: Services professionnels avec analyses personnalisées
-          text: Pour des besoins spécifiques, nous développons des tableaux de bord interactifs puissants, adaptés à vos initiatives d’innovation. Ces tableaux de bord vous permettent de suivre le succès de vos efforts et de surveiller des écosystèmes multi-paramètres. Cela vous assure d’ajuster continuellement vos stratégies sur la base d’analyses de données complètes, maximisant l’impact de vos initiatives d’innovation.
+        - title: TechLand — Intelligence Stratégique Technologique
+          text: TechLand vous offre une vision précise et fondée sur les données de tout
+                paysage technologique ; qui détient quoi, où se dirige le secteur et où
+                se situent les opportunités inexploitées. Basé sur PATSTAT et DOCDB,
+                mis à jour chaque semaine, TechLand est conçu pour les décideurs qui
+                ont besoin d’une analyse fiable et reproductible pour agir. Que vous
+                définissiez votre agenda R&D, évaluiez une cible d’acquisition ou
+                cartographiez votre position d’innovation, TechLand vous fournit
+                l’intelligence nécessaire pour prendre les bonnes décisions — de
+                manière autonome, à votre rythme.
+        - title: Conseil — Un accompagnement expert adapté à vos besoins
+          text: Chaque organisation a des besoins différents en matière d’accompagnement.
+                Certains clients savent exactement ce qu’ils cherchent et utilisent
+                TechLand de manière autonome. D’autres ont besoin d’aide pour interpréter
+                les résultats, traduire les conclusions en recommandations stratégiques
+                ou mener l’analyse conjointement. Nous nous adaptons à vos besoins ;
+                d’une simple session d’interprétation à une mission d’analyse complète
+                où nous travaillons aux côtés de votre équipe. Ensemble, nous définissons
+                les implications stratégiques et vous transférons les compétences
+                nécessaires pour que vous puissiez poursuivre de manière autonome.
       section3:
         title: TechLand
-        subtitle: Explorer le paysage technologique
+        subtitle: L’outil d’intelligence stratégique indispensable aux décideurs.
+                  Fondé sur les bases de données PATSTAT et DOCDB, mis à jour chaque
+                  semaine, TechLand couvre plus de 80 millions de brevets accordés
+                  dans tous les grands offices.
         image: techland_main_page.png
-        buttonText: Découvrir les fonctionnalités
+        buttonText: Découvrir toutes les fonctionnalités
         buttonLink: "/fr/fonctionalites"
       section5:
-        title: Contactez-nous
-        subtitle: Dites‑nous comment nous pouvons vous aider
-        buttonText: Envoyer un message
+        title: Parlons stratégie
+        subtitle: Parlez-nous de votre défi en matière d'intelligence technologique
+        buttonText: Envoyer le message
         action: https://formspree.io/f/xoqrargo
         method: POST
       footer:

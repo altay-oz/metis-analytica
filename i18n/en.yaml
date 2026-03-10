@@ -1,16 +1,16 @@
 - id: blog_posts
   translation: "Blog Posts"
 - id: section5_title
-  translation: "Drop us a line or two"
+  translation: "Let's talk strategy"
 - id: section5_subtitle
-  translation: "We'd love to hear from you"
-- id: section5_buttontext
-  translation: "Send Message"
+  translation: "Tell us about your technology intelligence challenge"
 - id: section5_name_placeholder
-  translation: "Enter your name"
+  translation: "Your name"
 - id: section5_email_placeholder
-  translation: "Enter your email address"
+  translation: "Your email"
 - id: section5_subject_placeholder
   translation: "Subject"
 - id: section5_message_placeholder
-  translation: "Your message..."
+  translation: "Your message"
+- id: section5_buttontext
+  translation: "Send message"
