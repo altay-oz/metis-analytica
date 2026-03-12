@@ -1,31 +1,45 @@
 {{ define "main" }}
-<section class="section">
-  <div class="container has-text-centered">
-    <h1 class="title">404</h1>
+<style>
+  .error-body { background: #f8fafc; color: #1e293b; text-align: center; padding: 80px 20px; min-height: 100vh; }
+  .error-box { max-width: 650px; margin: 0 auto; background: white; padding: 50px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+  .error-box h1 { color: #0092bc; font-size: 80px; margin: 10px 0; font-weight: 800; }
+  .error-box p { font-size: 18px; color: #64748b; line-height: 1.6; }
+  .error-btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #0092bc; color: white !important; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+  .error-btn:hover { background: #007a9e; }
+  .footer-link { color: #0092bc; text-decoration: none; font-weight: 500; }
+  .error-box img { width: 180px; margin-bottom: 20px; }
+</style>
 
-    <div id="msg-en">
-      <h2 class="subtitle">Page not found</h2>
-      <p class="mb-5">The page you are looking for doesn't exist.</p>
-      <a href="/" class="button primary-btn">Go back home</a>
+
+<section class="error-body">
+
+  <div class="error-box" id="msg-en">
+    <img src="/images/logos/metisheader.png" alt="Metis Analytica">
+    <h1>404</h1>
+    <p>Oops! Are you lost in the technology landscape analysis?</p>
+    <div>
+      <a href="/" class="error-btn">Back to metis analytica</a>
     </div>
-
-    <div id="msg-fr" style="display:none">
-      <h2 class="subtitle">Page introuvable</h2>
-      <p class="mb-5">La page que vous cherchez n'existe pas.</p>
-      <a href="/fr/" class="button primary-btn">Retour à l'accueil</a>
-    </div>
-
   </div>
+
+  <div class="error-box" id="msg-fr" style="display:none">
+    <img src="/images/logos/metisheader.png" alt="Metis Analytica">
+    <h1>404</h1>
+    <p>Oups ! Êtes-vous perdu dans l'analyse du paysage technologique ?</p>
+    <div>
+      <a href="/fr/" class="error-btn">Retour à metis analytica</a>
+    </div>
+  </div>
+
 </section>
 
 <script>
-  // If the URL that 404'd was under /fr/ show French message
   const referrer = document.referrer;
   const path = window.location.href;
-
   if (referrer.includes('/fr/') || path.includes('/fr/')) {
     document.getElementById('msg-en').style.display = 'none';
     document.getElementById('msg-fr').style.display = 'block';
   }
 </script>
 {{ end }}
+
