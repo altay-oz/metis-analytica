@@ -39,15 +39,15 @@ dans la durée.
 Ce qui devrait être un processus exploratoire se retrouvait contraint
 par les outils eux-mêmes.
 
-TechLand est né de cet écart — non pas comme un produit prédéfini, mais
-comme la réponse à une manière de travailler qui devait exister.
+TechLand est né de cet écart — non pas comme un produit prédéfini,
+mais comme une solution reflétant la démarche de travail nécessaire.
 
 ## Fondateur
 
 Altay a débuté sa carrière après avoir quitté un doctorat en
-ingénierie des matériaux, avant de s’orienter vers l’informatique —
-d’abord comme administrateur systèmes UNIX/Linux, puis progressivement
-vers la donnée et la recherche.
+ingénierie des matériaux, en s’orientant vers l’informatique — d’abord
+comme administrateur systèmes UNIX/Linux, puis progressivement vers la
+donnée et la recherche.
 
 Son doctorat en management, réalisé à Institut Mines-Télécom Business
 School, a apporté une dimension supplémentaire : la compréhension de la

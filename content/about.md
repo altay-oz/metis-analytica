@@ -37,13 +37,13 @@ What should have been an exploratory process became constrained by the
 tools themselves.
 
 TechLand emerged from that gap — not as a predefined product, but as a
-response to a way of working that was needed.
+solution reflecting the required working approach.
 
 ## Founder
 
-Altay began his career after leaving a Ph.D. program in materials
-engineering, before moving into IT — first as a UNIX/Linux system
-administrator, then progressively toward data and research.
+Altay began his career after leaving a PhD program in materials
+engineering, moving into IT — first as a UNIX/Linux system
+administrator, and then progressively toward data and research.
 
 His PhD in management, completed at Institut Mines-Télécom Business
 School, added another dimension: understanding how organisations make
