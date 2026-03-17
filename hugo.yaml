@@ -188,24 +188,18 @@ languages:
               link: /techlandfeatures
             - text: Our roadmap
               link: /roadmap
-          # column2:
-          #   title: "Docs"
-          #   links:
-          #   - text: Get started
-          #     link: /
-          #   - text: User guides
-          #     link: /
-          #   - text: Admin guide
-          #     link: /
-          #   - text: Developers
-          #     link: /
-          column3:
+          column2:
             title: "Blog"
             links:
             - text: All
               link: /blog
             - text: Latest
               link: /blog/2026-03-02-cybersecurity
+          column3:
+            title: "Company"
+            links:
+            - text: About
+              link: /about
   fr:
     languageName: Français
     weight: 2
@@ -349,10 +343,15 @@ languages:
               link: /fr/fonctionalites
             - text: Plan d'action
               link: /fr/feuillederoute
-          column3:
+          column2:
             title: "Blog"
             links:
             - text: Liste
               link: /fr/blog
             - text: Le dernier
               link: /fr/blog/2026-03-02-cybersecurite
+          column3:
+            title: "Entreprise"
+            links:
+            - text: À propos
+              link: /a_propos
