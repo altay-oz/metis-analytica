@@ -88,7 +88,8 @@ languages:
               - GDPR compliant
               - All updates included
               - Monthly digest
-            buttonText: Coming soon
+            url: https://demo.metis-analytica.com/
+            buttonText: Login
           - title: Research
             icon: laptop-globe
             plantitle: Everything in Free, plus
