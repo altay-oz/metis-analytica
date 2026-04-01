@@ -261,7 +261,8 @@ languages:
               - Conforme RGPD
               - Toutes les mises à jour incluses
               - Résumé mensuel
-            buttonText: Bientôt disponible
+            url: https://demo.metis-analytica.com/
+            buttonText: Login
           - title: Recherche
             icon: laptop-globe
             plantitle: Tout ce qui est dans Free, plus
