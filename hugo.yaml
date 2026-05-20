@@ -70,6 +70,8 @@ languages:
         url: /#section1
       - title: blog
         url: /blog
+      - title: reports
+        url: /reports
       - title: contact
         url: /#section5
       - title: français
@@ -243,6 +245,8 @@ languages:
         url: /fr/#section1
       - title: blog
         url: /fr/blog
+      - title: rapports
+        url: /fr/rapports
       - title: contact
         url: /fr/#section5
       - title: english
