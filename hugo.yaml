@@ -323,7 +323,7 @@ languages:
                   dans tous les grands offices.
         image: techland_main_page.png
         buttonText: Découvrir toutes les fonctionnalités
-        buttonLink: "/fr/fonctionalites"
+        buttonLink: "/fr/fonctionnalites/"
       section5:
         title: Parlons stratégie
         subtitle: Parlez-nous de votre défi en matière d'intelligence technologique
