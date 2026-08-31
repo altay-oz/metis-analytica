@@ -2,6 +2,7 @@
 {{- $title    := index $section1 "title" }}
 {{- $subtitle := index $section1 "subtitle" }}
 {{- $tiles    := index $section1 "tiles" }}
+
 <section class="section is-medium" id="section1">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -11,30 +12,49 @@
     </div>
 
     <div class="content-wrapper">
-      <div class="columns">
+      <div class="columns is-vcentered">
         {{- range $tiles }}
         <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
+          {{ if .stripe }}
+
+            <!-- Central Column: Embedded Stripe Pricing Table -->
+            <div class="feature-card is-bordered revealOnScroll delay-1" data-animation="fadeInLeft">
+
+              <div class="card-title has-text-centered" style="margin-bottom: 1.5rem;">
+                <h4>{{ .title }}</h4>
+              </div>
+
+              <stripe-pricing-table
+                pricing-table-id="{{ $.Site.Params.section1.pricingTableId }}"
+                publishable-key="pk_live_51QtbFgLBWuTLKQJxvUulyTDz9UGNEoUNUIQN509hRbga3XHth6IW6Sfe7tPbWTCesqiRnw59cdhaxK05rZWMolBo00tE9IwjnM">
+              </stripe-pricing-table>
             </div>
-            <div class="card-icon">
+          {{ else }}
+            <!-- Free & Business Columns -->
+            <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+              <div class="card-title">
+                <h4>{{ .title }}</h4>
+              </div>
+              <div class="card-icon">
                 <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}">
+              </div>
+              <div class="card-text">
+                <p>{{ .plantitle }}</p>
+              </div>
+              <div class="card-text">
+                <ul style="list-style-type: none; text-align: left; display: inline-block; margin: 0 auto; padding-left: 0;">
+                  {{- range .text }}
+                  <li style="margin-bottom: 8px;">✓ {{ . }}</li>
+                  {{- end }}
+                </ul>
+              </div>
+              <div class="card-action">
+                <a href="{{ .url }}" class="button btn-align-md accent-btn raised">
+                  {{ .buttonText }}
+                </a>
+              </div>
             </div>
-            <div class="card-text">
-              <p>{{ .plantitle }}</p>
-            </div>
-	    <div class="card-text">
-              <ul style="list-style-type: none; text-align: left; display: inline-block; margin: 0 auto; padding-left: 0;">
-                {{- range .text }}
-                <li style="margin-bottom: 8px;">✓ {{ . }}</li>
-                {{- end }}
-              </ul>
-            </div>
-            <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-            </div>
-          </div>
+          {{ end }}
         </div>
         {{- end }}
       </div>

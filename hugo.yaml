@@ -78,6 +78,7 @@ languages:
         url: /fr/
         button: false
       section1:
+        pricingTableId: "prctbl_1U9T6ULBWuTLKQJxMQh7Zif1" 
         title: Choose your plan
         subtitle: built for every stage of your innovation strategy
         tiles:
@@ -90,6 +91,7 @@ languages:
               - GDPR compliant
               - All updates included
               - Monthly digest
+            stripe: false
             url: https://demo.metis-analytica.com/
             buttonText: Login
           - title: Research
@@ -102,8 +104,9 @@ languages:
               - Data export to Excel and CSV
               - Email support
               - Monthly strategy call
-            url: https://linkedin.com/company/metis-analytica/
-            buttonText: Contact us
+            stripe: true
+            url: ""
+            buttonText: Subscribe
           - title: Business
             icon: plug-cloud
             plantitle: Everything in Research, plus
@@ -114,6 +117,7 @@ languages:
               - AI-generated Word reports
               - Dedicated sub-domain
               - Priority phone support
+            stripe: false
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contact us
       section2:
@@ -253,6 +257,7 @@ languages:
         url: /
         button: false
       section1:
+        pricingTableId: "prctbl_1UAWrVLBWuTLKQJxmV7gSKe7"
         title: Choisissez votre forfait
         subtitle: conçu pour chaque étape de votre stratégie d'innovation
         tiles:
@@ -265,6 +270,7 @@ languages:
               - Conforme RGPD
               - Toutes les mises à jour incluses
               - Résumé mensuel
+            stripe: false
             url: https://demo.metis-analytica.com/
             buttonText: Login
           - title: Recherche
@@ -277,7 +283,8 @@ languages:
               - Export des données en Excel et CSV
               - Support par email
               - Appel stratégique mensuel
-            url: https://linkedin.com/company/metis-analytica/
+            stripe: true
+            url: ""
             buttonText: Contactez-nous
           - title: Entreprise
             icon: plug-cloud
@@ -285,10 +292,11 @@ languages:
             text:
               - Analyse de clusters et détection de white space
               - Évaluation de cibles de fusion-acquisition
-              - Chatbot IA pour affiner les recherches
+              - Chatbot IA
               - Rapports Word générés par IA
               - Sous-domaine dédié
-              - Support téléphonique prioritaire
+              - Support téléphonique
+            stripe: false
             url: https://linkedin.com/company/metis-analytica/
             buttonText: Contactez-nous
       section2:
