@@ -107,6 +107,19 @@ languages:
             stripe: true
             url: ""
             buttonText: Subscribe
+          - title: Academic
+            icon: laptop-globe
+            plantitle: Flexible access for labs, courses & research groups 
+            text:
+              - Full Research access
+              - 2–100+ seats
+              - Flexible terms (semester, project, or year)
+              - Course integration & guest lectures
+              - Onboarding
+              - Shareable search query bookmarks
+              - Tailored academic rates
+            buttonText: Contact us
+            url: "#section5"
           - title: Business
             icon: plug-cloud
             plantitle: Everything in Research, plus
@@ -286,6 +299,19 @@ languages:
             stripe: true
             url: ""
             buttonText: Contactez-nous
+          - title: Académique
+            icon: laptop-globe
+            plantitle: Accès flexible pour labos, cours et groupes de recherche
+            text:
+              - Accès complet à la version Recherche
+              - 2 à 100+ accès
+              - Durées flexibles (semestre, projet ou année)
+              - Intégration aux cours et interventions sur mesure
+              - Onboarding
+              - Partage des favoris de requêtes de recherche
+              - Tarifs académiques sur mesure
+            buttonText: Contactez-nous
+            url: "#section5"
           - title: Entreprise
             icon: plug-cloud
             plantitle: Tout ce qui est dans Recherche, plus
