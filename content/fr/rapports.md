@@ -1,5 +1,5 @@
 ---
-title: "Rapports"
+title: "Les rapports"
 include_footer: true
 sidebar: false
 ---
@@ -14,27 +14,10 @@ de son approche de conseil.
 
 Tous les rapports sont disponibles en anglais.
 
-## Rapport 2025 sur le paysage technologique de la cybersécurité
+## Le rapport sur l’intelligence stratégique en cybersécurité (2026)
 
-Ce rapport met l’accent sur :
-
-- une analyse large du paysage technologique des brevets en cybersécurité
-- l’identification des principaux acteurs industriels et des tendances d’innovation
-- l’analyse des réseaux de citations et les méthodes d’intelligence brevet
-- des indicateurs orientés fusions-acquisitions (M&A), tels que la similarité et la complémentarité technologiques
-- des applications de machine learning incluant les k-nearest neighbors et le clustering
-- une démonstration des workflows d’intelligence concurrentielle fondés sur les brevets
-
-<a href="/files/metis-analytica_cybersecurity_v1.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-   Télécharger le rapport 2025
-</a>
-
-## Rapport 2026 d’intelligence stratégique en cybersécurité
-
-Ce rapport approfondit l’analyse vers une intelligence technologique
-stratégique et des workflows analytiques reproductibles.
+Ce rapport prolonge l’analyse de 2025 vers une intelligence
+technologique stratégique.
 
 Les principaux ajouts comprennent :
 
@@ -51,6 +34,23 @@ Les principaux ajouts comprennent :
    target="_blank"
    rel="noopener noreferrer">
    Télécharger le rapport 2026
+</a>
+
+## Le rapport sur le paysage technologique de la cybersécurité (2025)
+
+Ce rapport met l’accent sur :
+
+- une analyse large du paysage technologique des brevets en cybersécurité
+- l’identification des principaux acteurs industriels et des tendances d’innovation
+- l’analyse des réseaux de citations et les méthodes d’intelligence brevet
+- des indicateurs orientés fusions-acquisitions (M&A), tels que la similarité et la complémentarité technologiques
+- des applications de machine learning incluant les k-nearest neighbors et le clustering
+- une démonstration des workflows d’intelligence concurrentielle fondés sur les brevets
+
+<a href="/files/metis-analytica_cybersecurity_v1.pdf"
+   target="_blank"
+   rel="noopener noreferrer">
+   Télécharger le rapport 2025
 </a>
 
 ## À propos de l’approche analytique

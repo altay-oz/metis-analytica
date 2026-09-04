@@ -66,21 +66,23 @@ languages:
           url: /#section3
         - title: TechLand features
           url: /techlandfeatures
-        - title: Our roadmap
+        - title: our roadmap
           url: /roadmap
       - title: pricing
         url: /#section1
-      - title: blog
-        url: /blog
-      - title: reports
-        url: /reports
+      - title: resources
+        sublinks:
+        - title: blog
+          url: /blog
+        - title: reports
+          url: /reports
       - title: contact
         url: /#section5
       - title: français
         url: /fr/
         button: false
       section1:
-        pricingTableId: "prctbl_1U9T6ULBWuTLKQJxMQh7Zif1" 
+        pricingTableId: "prctbl_1U9T6ULBWuTLKQJxMQh7Zif1"
         title: Choose your plan
         subtitle: built for every stage of your innovation strategy
         tiles:
@@ -202,7 +204,12 @@ languages:
         bulmalogo: false
         quicklinks:
           column1:
-            title: "Product"
+            title: Company
+            links:
+            - text: About
+              link: /about
+          column2:
+            title: Product
             links:
             - text: TechLand
               link: /#section3
@@ -210,18 +217,13 @@ languages:
               link: /techlandfeatures
             - text: Our roadmap
               link: /roadmap
-          column2:
-            title: "Blog"
-            links:
-            - text: All
-              link: /blog
-            - text: Latest
-              link: /blog/2026-03-02-cybersecurity
           column3:
-            title: "Company"
+            title: Resources
             links:
-            - text: About
-              link: /about
+            - text: Blog
+              link: /blog
+            - text: Reports
+              link: /reports
   fr:
     languageName: Français
     weight: 2
@@ -264,10 +266,12 @@ languages:
           url: /fr/feuillederoute
       - title: forfaits
         url: /fr/#section1
-      - title: blog
-        url: /fr/blog
-      - title: rapports
-        url: /fr/rapports
+      - title: resources
+        sublinks:
+        - title: blog
+          url: /fr/blog
+        - title: rapports
+          url: /fr/rapports
       - title: contact
         url: /fr/#section5
       - title: english
@@ -379,6 +383,11 @@ languages:
         bulmalogo: false
         quicklinks:
           column1:
+            title: "Entreprise"
+            links:
+            - text: À propos
+              link: /fr/a_propos
+          column2:
             title: "Produit"
             links:
             - text: TechLand
@@ -387,15 +396,10 @@ languages:
               link: /fr/fonctionalites
             - text: Plan d'action
               link: /fr/feuillederoute
-          column2:
-            title: "Blog"
-            links:
-            - text: Liste
-              link: /fr/blog
-            - text: Le dernier
-              link: /fr/blog/2026-03-02-cybersecurite
           column3:
-            title: "Entreprise"
+            title: "Ressources"
             links:
-            - text: À propos
-              link: /fr/a_propos
+            - text: Blog
+              link: /fr/blog
+            - text: Rapports
+              link: /fr/rapports

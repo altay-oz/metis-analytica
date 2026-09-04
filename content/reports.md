@@ -12,27 +12,10 @@ Each report explores a different analytical perspective and
 demonstrates distinct capabilities of the Metis Analytica environment
 and consulting workflow.
 
-## 2025 Cybersecurity Technology Landscape Report
-
-This report emphasizes:
-
-- broad technology landscape analysis of cybersecurity patents
-- identification of major industrial actors and innovation trends
-- citation network analysis and patent intelligence methods
-- M&A-oriented metrics such as technological similarity and complementarity
-- machine learning applications including k-nearest neighbors and clustering
-- demonstration of patent-based competitive intelligence workflows
-
-<a href="/files/metis-analytica_cybersecurity_v1.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-   Download the 2025 Report
-</a>
-
 ## 2026 Cybersecurity Strategic Intelligence Report
 
-This report extends the analysis toward strategic technology
-intelligence and reproducible analytical workflows.
+This report extends the 2025 analysis toward strategic technology
+intelligence.
 
 Key additions include:
 
@@ -49,6 +32,23 @@ Key additions include:
    target="_blank"
    rel="noopener noreferrer">
    Download the 2026 Report
+</a>
+
+## 2025 Cybersecurity Technology Landscape Report
+
+This report emphasizes:
+
+- broad technology landscape analysis of cybersecurity patents
+- identification of major industrial actors and innovation trends
+- citation network analysis and patent intelligence methods
+- M&A-oriented metrics such as technological similarity and complementarity
+- machine learning applications including k-nearest neighbors and clustering
+- demonstration of patent-based competitive intelligence workflows
+
+<a href="/files/metis-analytica_cybersecurity_v1.pdf"
+   target="_blank"
+   rel="noopener noreferrer">
+   Download the 2025 Report
 </a>
 
 ## About the Analytical Approach
