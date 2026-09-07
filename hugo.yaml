@@ -78,11 +78,12 @@ languages:
           url: /reports
       - title: contact
         url: /#section5
-      - title: français
+      - title: 
         url: /fr/
         button: false
       section1:
         pricingTableId: "prctbl_1U9T6ULBWuTLKQJxMQh7Zif1"
+        pricingTableIdDark: "prctbl_1UD33pLBWuTLKQJxMpMzDrjw"
         title: Choose your plan
         subtitle: built for every stage of your innovation strategy
         tiles:
@@ -274,11 +275,12 @@ languages:
           url: /fr/rapports
       - title: contact
         url: /fr/#section5
-      - title: english
+      - title: 
         url: /
         button: false
       section1:
         pricingTableId: "prctbl_1UAWrVLBWuTLKQJxmV7gSKe7"
+        pricingTableIdDark: "prctbl_1UD3NdLBWuTLKQJxc4XcVl4I"
         title: Choisissez votre forfait
         subtitle: conçu pour chaque étape de votre stratégie d'innovation
         tiles:

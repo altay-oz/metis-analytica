@@ -1,26 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
+	<head>
+		<script>
+			(function () {
+				var stored = localStorage.getItem("theme");
+				var theme =
+					stored ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
 
-    {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ partial "css.html" . }}
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-  </head>
-  <body>
-    {{ if ne .Site.Params.preloader false }}
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="status"></div>
-    </div>
-    {{ end }}
+		{{ partial "meta.html" . }}
+		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+		{{ partial "css.html" . }}
+		<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+	</head>
+	<body>
+		{{ if ne .Site.Params.preloader false }}
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status"></div>
+		</div>
+		{{ end }} {{ block "main" . }} {{ end }}
 
-    {{ block "main" . }}
-    {{ end }}
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#"></a></div>
 
-    <!-- Back To Top Button -->
-    <div id="backtotop"><a href="#"></a></div>
+		<script>
+			document.addEventListener("click", function (e) {
+				if (e.target.closest("#theme-toggle")) {
+					var html = document.documentElement;
+					var next =
+						html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+					html.setAttribute("data-theme", next);
+					localStorage.setItem("theme", next);
+				}
+			});
 
-    {{ partial "javascript.html" . }}
-  </body>
+			window
+				.matchMedia("(prefers-color-scheme: dark)")
+				.addEventListener("change", function (e) {
+					if (!localStorage.getItem("theme")) {
+						document.documentElement.setAttribute(
+							"data-theme",
+							e.matches ? "dark" : "light",
+						);
+					}
+				});
+		</script>
+
+		{{ partial "javascript.html" . }} {{ partial "javascript.html" . }}
+	</body>
 </html>

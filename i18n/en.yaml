@@ -1,9 +1,9 @@
 - id: blog_posts
   translation: "Blog Posts"
 - id: section5_title
-  translation: "Let's talk strategy"
+  translation: "Contact us"
 - id: section5_subtitle
-  translation: "Tell us about your technology intelligence challenge"
+  translation: "We'd be glad to hear from you"
 - id: section5_name_placeholder
   translation: "Your name"
 - id: section5_email_placeholder
@@ -11,6 +11,6 @@
 - id: section5_subject_placeholder
   translation: "Subject"
 - id: section5_message_placeholder
-  translation: "Your message"
+  translation: "Your message..."
 - id: section5_buttontext
   translation: "Send message"

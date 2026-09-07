@@ -1,0 +1,185 @@
+/* ==========================================================================
+Dark mode override layer
+========================================================================== */
+:root {
+	--bg-color: #{$white};
+	--text-color: #{$blue-grey};
+	--card-bg: #{$white};
+	--section-alt-bg: #{$light-grey};
+	--navbar-bg: #{$white};
+	--border-color: #{$fade-grey};
+}
+
+// Theme toggle icon swap
+.icon-dark-mode {
+	display: none;
+}
+
+html[data-theme="dark"] {
+	.icon-light-mode {
+		display: none;
+	}
+	.icon-dark-mode {
+		display: inline-block;
+	}
+}
+
+// Partner-logo swap
+.logo-dark-mode {
+	display: none;
+}
+html[data-theme="dark"] {
+	.logo-light-mode {
+		display: none;
+	}
+	.logo-dark-mode {
+		display: inline-block;
+	}
+}
+
+// Pricing table swap (same pattern as logo/theme-icon toggle)
+.pricing-dark-mode {
+	display: none;
+}
+html[data-theme="dark"] {
+	.pricing-light-mode {
+		display: none;
+	}
+	.pricing-dark-mode {
+		display: inline-block;
+	}
+}
+
+html[data-theme="dark"] {
+	--bg-color: #212529; // was #14181f — Bootstrap gray-900
+	--text-color: #dee2e6; // was #d8dee9 — gray-300
+	--card-bg: #2b3035; // was #1c222c — "tertiary" surface tone
+	--section-alt-bg: #343a40; // was #1a1f28 — gray-800
+	--navbar-bg: #212529; // was #14181f
+	--border-color: #495057; // was #2a3140 — gray-700
+
+	body {
+		background-color: var(--bg-color);
+		color: var(--text-color);
+	}
+
+	// Sections
+	.section {
+		background-color: var(--bg-color);
+		&.section-feature-grey {
+			background-color: var(--section-alt-bg);
+		}
+		&.section-light-grey {
+			background-color: var(--section-alt-bg-2);
+		}
+	}
+	.title,
+	.subtitle,
+	.title-wrapper .title,
+	.title-wrapper .subtitle {
+		color: var(--text-color);
+	}
+	.subtitle.is-muted {
+		color: #adb5bd; // was #9aa5b8 — gray-500
+	}
+
+	// Blog/article body content
+	.content {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		strong {
+			color: var(--text-color);
+		}
+	}
+
+	// Cards
+	.feature-card,
+	.flex-card {
+		background-color: var(--card-bg) !important;
+		.card-title h4,
+		.card-text p {
+			color: var(--text-color);
+		}
+		&.is-bordered {
+			border-color: var(--border-color);
+		}
+	}
+
+	// Hero
+	.hero-body {
+		.title,
+		.subtitle {
+			color: var(--text-color);
+		}
+	}
+
+	#preloader {
+		background-color: var(--bg-color);
+	}
+
+	// Contact form (section5) — Bulma's default .input/.textarea are hardcoded
+	// to a white background + dark text, so they need an explicit override
+	#section5 {
+		.input,
+		.textarea {
+			background-color: var(--card-bg);
+			border-color: var(--border-color);
+			color: var(--text-color);
+			&::placeholder {
+				color: #8a93a6;
+			}
+			&:hover {
+				border-color: #5a6472;
+			}
+			&:focus,
+			&.is-focused,
+			&:active,
+			&.is-active {
+				border-color: $primary; // keep your brand blue focus ring, reads fine on dark
+			}
+		}
+	}
+
+	.navbar.is-fresh,
+	.navbar.is-fresh.is-fixed,
+	#navbar-clone {
+		background-color: var(--navbar-bg) !important;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45); // replaces border-bottom
+		.navbar-item,
+		.navbar-link {
+			color: var(--text-color) !important;
+		}
+		a.navbar-item:hover,
+		.navbar-link:hover,
+		a.navbar-item.is-active,
+		.navbar-link.is-active {
+			background-color: var(--section-alt-bg) !important;
+			color: var(--text-color) !important;
+		}
+		.navbar-dropdown {
+			background-color: var(--navbar-bg);
+			border-color: var(--border-color);
+			a.navbar-item:hover,
+			a.navbar-item.is-active {
+				background-color: var(--section-alt-bg) !important;
+				color: var(--text-color) !important;
+			}
+		}
+		.navbar-menu {
+			background-color: var(--navbar-bg);
+		}
+	}
+}
+
+// Optional: default to the visitor's OS preference on first visit
+// (only applies when no explicit choice is stored yet — see the JS below)
+@media (prefers-color-scheme: dark) {
+	html:not([data-theme]) {
+		// duplicate of the dark block above, minus the selector wrapper —
+		// if you want this, ask and I'll generate it so you don't hand-sync two blocks
+	}
+}

@@ -3,7 +3,7 @@
 {{- $subtitle := index $section1 "subtitle" }}
 {{- $tiles    := index $section1 "tiles" }}
 
-<section class="section is-medium" id="section1">
+<section class="section section-feature-grey is-medium" id="section1">
   <div class="container">
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2">{{ $title }}</h2>
@@ -18,6 +18,7 @@
           {{ if .stripe }}
 
             <!-- Central Column: Embedded Stripe Pricing Table -->
+            <!-- Central Column: Embedded Stripe Pricing Table -->
             <div class="feature-card is-bordered revealOnScroll delay-1" data-animation="fadeInLeft">
 
               <div class="card-title has-text-centered" style="margin-bottom: 1.5rem;">
@@ -25,10 +26,18 @@
               </div>
 
               <stripe-pricing-table
+                class="pricing-light-mode"
                 pricing-table-id="{{ $.Site.Params.section1.pricingTableId }}"
                 publishable-key="pk_live_51QtbFgLBWuTLKQJxvUulyTDz9UGNEoUNUIQN509hRbga3XHth6IW6Sfe7tPbWTCesqiRnw59cdhaxK05rZWMolBo00tE9IwjnM">
               </stripe-pricing-table>
+
+              <stripe-pricing-table
+                class="pricing-dark-mode"
+                pricing-table-id="{{ $.Site.Params.section1.pricingTableIdDark }}"
+                publishable-key="pk_live_51QtbFgLBWuTLKQJxvUulyTDz9UGNEoUNUIQN509hRbga3XHth6IW6Sfe7tPbWTCesqiRnw59cdhaxK05rZWMolBo00tE9IwjnM">
+              </stripe-pricing-table>
             </div>
+
           {{ else }}
             <!-- Free & Business Columns -->
             <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
