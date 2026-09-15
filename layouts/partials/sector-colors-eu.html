@@ -1,0 +1,10 @@
+{{ $sectors := slice "Automobiles & Parts" "Industrial Engineering & Machinery" "Pharmaceuticals & Biotechnology" "Electronics & Electrical Equipment" "Food & Consumer Goods" "Chemicals" "Technology Hardware & Semiconductors" "Industrial Metals & Mining" "Utilities & Energy" "Construction & Materials" "Aerospace & Defence" "Telecommunications" "Software & Computer Services" "Industrial Transportation" "Financial Services" "Forestry & Paper" "Travel & Leisure" "Media" "Support Services" }}
+const SECTOR_ORDER = {{ $sectors | jsonify }};
+
+function colorForSector(sector) {
+  const i = SECTOR_ORDER.indexOf(sector);
+  const total = SECTOR_ORDER.length;
+  const hue = i >= 0 ? Math.round((360 / total) * i) : 0;
+  return `hsl(${hue}, 65%, 50%)`;
+}
+

@@ -17,6 +17,7 @@
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 		{{ partial "css.html" . }}
 		<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body>
 		{{ if ne .Site.Params.preloader false }}
@@ -52,6 +53,6 @@
 				});
 		</script>
 
-		{{ partial "javascript.html" . }} {{ partial "javascript.html" . }}
+		{{ partial "javascript.html" . }}
 	</body>
 </html>

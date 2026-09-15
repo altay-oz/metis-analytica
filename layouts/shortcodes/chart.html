@@ -1,0 +1,7 @@
+<canvas id="chart-{{ .Get 0 }}" style="max-width: 100%"></canvas>
+<script>
+	(function() {
+	  const ctx = document.getElementById('chart-{{ .Get 0 }}').getContext('2d');
+	  new Chart(ctx, {{ .Inner | safeJS }});
+	})();
+</script>

@@ -2,13 +2,13 @@ baseURL: https://metis-analytica.com/
 languageCode: en
 title: metis analytica
 
-theme: 'hugo-fresh'
+theme: "hugo-fresh"
 
 googleAnalytics: G-SHSYR2Z8QH # Put in your tracking code without quotes
 # Disables warnings
 disableKinds:
-- taxonomy
-- term
+  - taxonomy
+  - term
 markup:
   goldmark:
     renderer:
@@ -25,7 +25,6 @@ languages:
     title: metis analytica
     params:
       flag: 🇺🇸
-      description: TechLand — the strategic intelligence tool decision-makers have been missing. Build, defend, and adjust your technology roadmap with evidence-based patent intelligence.
       # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
       openGraph: true
       # Used as meta data; describe your site to make Google Bots happy
@@ -33,54 +32,54 @@ languages:
       # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
       # preloader: false
       navbarlogo:
-      # Logo (from static/images/logos/___)
+        # Logo (from static/images/logos/___)
         image: logos/metisheader.png
         link: /
         width: 170
         height: 56
       font:
         name: "Inria Sans"
-        sizes: [400,600]
+        sizes: [400, 600]
       hero:
-        title: The strategic intelligence tool<br>decision-makers have been missing
-        subtitle: Build, defend, and adjust your technology roadmap with confidence — backed by patent intelligence, not instinct
+        title: The strategic intelligence tool<br>decision-makers have been missing,<br>backed by the experts who built it
+        subtitle: Build, defend, and adjust your technology roadmap with confidence, powered by patent intelligence, not instinct
         buttontext: See how it works
         buttonlink: "#section3"
         image: metis_main.svg
         # Footer logos (from static/images/logos/clients/*.svg)
         # urls are optional
         clientlogos:
-        - logo: eotec
-          url: https://www.eotecdev.net/
-        - logo: retina
-          url: https://www.retinadata.com/
+          - logo: eotec
+            url: https://www.eotecdev.net/
+          - logo: retina
+            url: https://www.retinadata.com/
       # Customizable navbar. For a dropdown, add a "sublinks" list.
       navbar:
-      - title: about
-        url: /about
-      - title: services
-        url: /#section2
-      - title: product
-        sublinks:
-        - title: TechLand
-          url: /#section3
-        - title: TechLand features
-          url: /techlandfeatures
-        - title: our roadmap
-          url: /roadmap
-      - title: pricing
-        url: /#section1
-      - title: resources
-        sublinks:
-        - title: blog
-          url: /blog
-        - title: reports
-          url: /reports
-      - title: contact
-        url: /#section5
-      - title: 
-        url: /fr/
-        button: false
+        - title: about
+          url: /about
+        - title: services
+          url: /#section2
+        - title: product
+          sublinks:
+            - title: TechLand
+              url: /#section3
+            - title: TechLand features
+              url: /techlandfeatures
+            - title: our roadmap
+              url: /roadmap
+        - title: pricing
+          url: /#section1
+        - title: resources
+          sublinks:
+            - title: blog
+              url: /blog
+            - title: reports
+              url: /reports
+        - title: contact
+          url: /#section5
+        - title:
+          url: /fr/
+          button: false
       section1:
         pricingTableId: "prctbl_1U9T6ULBWuTLKQJxMQh7Zif1"
         pricingTableIdDark: "prctbl_1UD33pLBWuTLKQJxMpMzDrjw"
@@ -114,7 +113,7 @@ languages:
             buttonText: Subscribe
           - title: Academic
             icon: laptop-globe
-            plantitle: Flexible access for labs, courses & research groups 
+            plantitle: Flexible access for labs, courses & research groups
             text:
               - Full Research access
               - 2–100+ seats
@@ -142,29 +141,32 @@ languages:
         title: Services
         subtitle: The right level of support for every stage of your technology strategy.
         features:
-        - title: TechLand — Strategic Technology Intelligence
-          text: TechLand gives you a precise, evidence-based picture of any technology
-                landscape — who owns what, where the field is heading, and where the
-                white-space  spaces are. Built on PATSTAT and DOCDB, refreshed weekly,
-                and designed for decision-makers who need reliable, reproducible analysis
-                they can act on. Whether you are shaping your R&D agenda, evaluating an
-                acquisition target, or mapping your innovation position, TechLand gives
-                you the intelligence to make the right call — independently, at your own pace.
-        - title: Consultancy — Expert Support When You Need It
-          text: Not every organisation needs the same level of support. Some clients know
-                exactly what they are looking for and use TechLand independently. Others
-                need help interpreting results, translating findings into strategic
-                recommendations, or running the analysis jointly. We adapt to your needs —
-                from a one-off interpretation session to a full joint analysis engagement
-                where we work alongside your team, shape the strategic implications together,
-                and transfer the capability so you can continue independently. All engagements
-                are conducted under NDA, with one client per sector at a time — so your
-                strategic intelligence stays exclusively yours.
+          - title: TechLand — Strategic Technology Intelligence
+            text:
+              TechLand gives you a precise, evidence-based picture of any technology
+              landscape — who owns what, where the field is heading, and where the
+              white-space  spaces are. Built on PATSTAT and DOCDB, refreshed weekly,
+              and designed for decision-makers who need reliable, reproducible analysis
+              they can act on. Whether you are shaping your R&D agenda, evaluating an
+              acquisition target, or mapping your innovation position, TechLand gives
+              you the intelligence to make the right call — independently, at your own pace.
+          - title: Consultancy — Expert Support When You Need It
+            text:
+              Not every organisation needs the same level of support. Some clients know
+              exactly what they are looking for and use TechLand independently. Others
+              need help interpreting results, translating findings into strategic
+              recommendations, or running the analysis jointly. We adapt to your needs —
+              from a one-off interpretation session to a full joint analysis engagement
+              where we work alongside your team, shape the strategic implications together,
+              and transfer the capability so you can continue independently. All engagements
+              are conducted under NDA, with one client per sector at a time — so your
+              strategic intelligence stays exclusively yours.
       section3:
         title: TechLand
-        subtitle: The strategic intelligence tool decision-makers have been missing — built
-                  on PATSTAT and DOCDB, refreshed weekly, covering over 80 million granted
-                  patents across all major offices
+        subtitle:
+          The strategic intelligence tool decision-makers have been missing — built
+          on PATSTAT and DOCDB, refreshed weekly, covering over 80 million granted
+          patents across all major offices
         image: techland_main_page.png
         buttonText: See all features
         buttonLink: "/techlandfeatures"
@@ -198,8 +200,8 @@ languages:
         # Social media links (GitHub, Twitter, etc.). All are optional.
         # Icons are from Font Awesome
         socialmedia:
-        - link: https://linkedin.com/company/metis-analytica/
-          icon: linkedin
+          - link: https://linkedin.com/company/metis-analytica/
+            icon: linkedin
         # - link: https://discord.com/techland
         #   icon: discord
         bulmalogo: false
@@ -207,24 +209,24 @@ languages:
           column1:
             title: Company
             links:
-            - text: About
-              link: /about
+              - text: About
+                link: /about
           column2:
             title: Product
             links:
-            - text: TechLand
-              link: /#section3
-            - text: TechLand features
-              link: /techlandfeatures
-            - text: Our roadmap
-              link: /roadmap
+              - text: TechLand
+                link: /#section3
+              - text: TechLand features
+                link: /techlandfeatures
+              - text: Our roadmap
+                link: /roadmap
           column3:
             title: Resources
             links:
-            - text: Blog
-              link: /blog
-            - text: Reports
-              link: /reports
+              - text: Blog
+                link: /blog
+              - text: Reports
+                link: /reports
   fr:
     languageName: Français
     weight: 2
@@ -240,44 +242,44 @@ languages:
         height: 56
       font:
         name: "Inria Sans"
-        sizes: [400,600]
+        sizes: [400, 600]
       hero:
-        title: L'outil d'intelligence stratégique<br>qui manquait aux décideurs
-        subtitle: Construisez, défendez et ajustez votre feuille de route technologique en toute confiance — fondée sur l’intelligence brevets, et non sur l’intuition.
+        title: L'outil d'intelligence stratégique<br>qui manquait aux décideurs,<br>porté par les experts qui l'ont conçu
+        subtitle: Construisez, défendez et ajustez votre feuille de route technologique en toute confiance, portée par les données brevets, et non par l'intuition
         buttonText: Découvrir
         buttonlink: "#section3"
         image: metis_main.svg
         clientlogos:
-        - logo: eotec
-          url: https://www.eotecdev.net/
-        - logo: retina
-          url: https://www.retinadata.com/
+          - logo: eotec
+            url: https://www.eotecdev.net/
+          - logo: retina
+            url: https://www.retinadata.com/
       navbar:
-      - title: à propos
-        url: /fr/a_propos
-      - title: services
-        url: /fr/#section2
-      - title: produit
-        sublinks:
-        - title: TechLand
-          url: /fr/#section3
-        - title: Les fonctionnalités de TechLand
-          url: /fr/fonctionnalites
-        - title: Feuille de route
-          url: /fr/feuillederoute
-      - title: forfaits
-        url: /fr/#section1
-      - title: resources
-        sublinks:
-        - title: blog
-          url: /fr/blog
-        - title: rapports
-          url: /fr/rapports
-      - title: contact
-        url: /fr/#section5
-      - title: 
-        url: /
-        button: false
+        - title: à propos
+          url: /fr/a_propos
+        - title: services
+          url: /fr/#section2
+        - title: produit
+          sublinks:
+            - title: TechLand
+              url: /fr/#section3
+            - title: Les fonctionnalités de TechLand
+              url: /fr/fonctionnalites
+            - title: Feuille de route
+              url: /fr/feuillederoute
+        - title: forfaits
+          url: /fr/#section1
+        - title: resources
+          sublinks:
+            - title: blog
+              url: /fr/blog
+            - title: rapports
+              url: /fr/rapports
+        - title: contact
+          url: /fr/#section5
+        - title:
+          url: /
+          button: false
       section1:
         pricingTableId: "prctbl_1UAWrVLBWuTLKQJxmV7gSKe7"
         pricingTableIdDark: "prctbl_1UD3NdLBWuTLKQJxc4XcVl4I"
@@ -339,32 +341,35 @@ languages:
         title: Services
         subtitle: Le niveau d'accompagnement adapté à chaque étape de votre stratégie technologique.
         features:
-        - title: TechLand — Intelligence Stratégique Technologique
-          text: TechLand vous offre une vision précise et fondée sur les données de tout
-                paysage technologique ; qui détient quoi, où se dirige le secteur et où
-                se situent les opportunités inexploitées. Basé sur PATSTAT et DOCDB,
-                mis à jour chaque semaine, TechLand est conçu pour les décideurs qui
-                ont besoin d’une analyse fiable et reproductible pour agir. Que vous
-                définissiez votre agenda R&D, évaluiez une cible d’acquisition ou
-                cartographiez votre position d’innovation, TechLand vous fournit
-                l’intelligence nécessaire pour prendre les bonnes décisions — de
-                manière autonome, à votre rythme.
-        - title: Conseil — Un accompagnement expert adapté à vos besoins
-          text: Chaque organisation a des besoins différents en matière d’accompagnement.
-                Certains clients savent exactement ce qu’ils cherchent et utilisent
-                TechLand de manière autonome. D’autres ont besoin d’aide pour interpréter
-                les résultats, traduire les conclusions en recommandations stratégiques
-                ou mener l’analyse conjointement. Nous nous adaptons à vos besoins ;
-                d’une simple session d’interprétation à une mission d’analyse complète
-                où nous travaillons aux côtés de votre équipe. Ensemble, nous définissons
-                les implications stratégiques et vous transférons les compétences
-                nécessaires pour que vous puissiez poursuivre de manière autonome.
+          - title: TechLand — Intelligence Stratégique Technologique
+            text:
+              TechLand vous offre une vision précise et fondée sur les données de tout
+              paysage technologique ; qui détient quoi, où se dirige le secteur et où
+              se situent les opportunités inexploitées. Basé sur PATSTAT et DOCDB,
+              mis à jour chaque semaine, TechLand est conçu pour les décideurs qui
+              ont besoin d’une analyse fiable et reproductible pour agir. Que vous
+              définissiez votre agenda R&D, évaluiez une cible d’acquisition ou
+              cartographiez votre position d’innovation, TechLand vous fournit
+              l’intelligence nécessaire pour prendre les bonnes décisions — de
+              manière autonome, à votre rythme.
+          - title: Conseil — Un accompagnement expert adapté à vos besoins
+            text:
+              Chaque organisation a des besoins différents en matière d’accompagnement.
+              Certains clients savent exactement ce qu’ils cherchent et utilisent
+              TechLand de manière autonome. D’autres ont besoin d’aide pour interpréter
+              les résultats, traduire les conclusions en recommandations stratégiques
+              ou mener l’analyse conjointement. Nous nous adaptons à vos besoins ;
+              d’une simple session d’interprétation à une mission d’analyse complète
+              où nous travaillons aux côtés de votre équipe. Ensemble, nous définissons
+              les implications stratégiques et vous transférons les compétences
+              nécessaires pour que vous puissiez poursuivre de manière autonome.
       section3:
         title: TechLand
-        subtitle: L’outil d’intelligence stratégique indispensable aux décideurs.
-                  Fondé sur les bases de données PATSTAT et DOCDB, mis à jour chaque
-                  semaine, TechLand couvre plus de 80 millions de brevets accordés
-                  dans tous les grands offices.
+        subtitle:
+          L’outil d’intelligence stratégique indispensable aux décideurs.
+          Fondé sur les bases de données PATSTAT et DOCDB, mis à jour chaque
+          semaine, TechLand couvre plus de 80 millions de brevets accordés
+          dans tous les grands offices.
         image: techland_main_page.png
         buttonText: Découvrir toutes les fonctionnalités
         buttonLink: "/fr/fonctionnalites/"
@@ -378,8 +383,8 @@ languages:
         logo: metisheader.png
         socialmediatitle: Suivez-nous
         socialmedia:
-        - link: https://linkedin.com/company/metis-analytica/
-          icon: linkedin
+          - link: https://linkedin.com/company/metis-analytica/
+            icon: linkedin
         # - link: https://discord.com/techland
         #   icon: discord
         bulmalogo: false
@@ -387,21 +392,21 @@ languages:
           column1:
             title: "Entreprise"
             links:
-            - text: À propos
-              link: /fr/a_propos
+              - text: À propos
+                link: /fr/a_propos
           column2:
             title: "Produit"
             links:
-            - text: TechLand
-              link: /fr/#section3
-            - text: Les fonctionalités de TechLand
-              link: /fr/fonctionalites
-            - text: Plan d'action
-              link: /fr/feuillederoute
+              - text: TechLand
+                link: /fr/#section3
+              - text: Les fonctionalités de TechLand
+                link: /fr/fonctionalites
+              - text: Plan d'action
+                link: /fr/feuillederoute
           column3:
             title: "Ressources"
             links:
-            - text: Blog
-              link: /fr/blog
-            - text: Rapports
-              link: /fr/rapports
+              - text: Blog
+                link: /fr/blog
+              - text: Rapports
+                link: /fr/rapports

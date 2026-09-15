@@ -1,0 +1,122 @@
+<div style="max-width: 100%">
+	<canvas id="rd-patents-scatter"></canvas>
+	<div style="text-align: center; margin-top: 0.75em;">
+		<button id="scope-ep" class="scope-toggle" style="font-weight: bold;">EPO</button>
+		<button id="scope-us" class="scope-toggle">USPTO</button>
+	</div>
+	<input
+		type="range"
+		id="year-slider"
+		min="2006"
+		max="2023"
+		value="2023"
+		style="width: 100%; margin-top: 1em;"
+	/>
+	<div style="text-align: center; font-weight: bold" id="year-label">2023</div>
+</div>
+<script>
+	(function () {
+		{{ partial "sector-colors-eu.html" . | safeJS }}
+
+		let allData = [];
+		let chart;
+		let xMin, xMax, yMin, yMax;
+		let sectorsWithData;
+		let currentScope = "EP";
+		const scopeLabel = { EP: "EPO", US: "USPTO" };
+
+		fetch("/data/scatter_rd_patents.json")
+			.then((r) => r.json())
+			.then((data) => {
+				allData = data;
+
+				// axis bounds computed across BOTH scopes combined, so
+				// toggling EP/US doesn't cause the axis to jump around,
+				// same stability principle already used across years
+				xMin = Math.min(...data.map((d) => d.rd)) * 0.8;
+				xMax = Math.max(...data.map((d) => d.rd)) * 1.2;
+				yMin = Math.min(...data.map((d) => d.patents)) * 0.8;
+				yMax = Math.max(...data.map((d) => d.patents)) * 1.2;
+
+				// union of sectors present in EITHER scope, so the legend
+				// stays stable when switching between EP and US too
+				sectorsWithData = SECTOR_ORDER.filter((sector) =>
+					data.some((d) => d.sector === sector)
+				);
+
+				const slider = document.getElementById("year-slider");
+				const label = document.getElementById("year-label");
+				const ctx = document.getElementById("rd-patents-scatter").getContext("2d");
+				const epBtn = document.getElementById("scope-ep");
+				const usBtn = document.getElementById("scope-us");
+
+				function draw() {
+					const year = parseInt(slider.value);
+					const filtered = allData.filter(
+						(d) => d.year === year && d.scope === currentScope
+					);
+
+					const datasets = sectorsWithData.map((sector) => ({
+						label: sector,
+						data: filtered
+							.filter((d) => d.sector === sector)
+							.map((d) => ({ x: d.rd, y: d.patents, company: d.company })),
+						backgroundColor: colorForSector(sector),
+					}));
+
+					if (chart) chart.destroy();
+					chart = new Chart(ctx, {
+						type: "scatter",
+						data: { datasets: datasets },
+						options: {
+							scales: {
+								x: {
+									type: "logarithmic",
+									min: xMin,
+									max: xMax,
+									title: { display: true, text: "R&D expenditure (€M, log scale)" },
+								},
+								y: {
+									type: "logarithmic",
+									min: yMin,
+									max: yMax,
+									title: { display: true, text: "Patents filed (log scale)" },
+								},
+							},
+							plugins: {
+								title: {
+									display: true,
+									text: `R&D Expenditure vs. Patents Filed (${scopeLabel[currentScope]})`,
+									font: { size: 16 },
+								},
+								legend: {
+									position: "bottom",
+								},
+								tooltip: {
+									callbacks: {
+										label: (ctx) => `${ctx.raw.company}: R&D €${ctx.raw.x}M, ${ctx.raw.y} patents`,
+									},
+								},
+							},
+						},
+					});
+				}
+
+				function setScope(scope) {
+					currentScope = scope;
+					epBtn.style.fontWeight = scope === "EP" ? "bold" : "normal";
+					usBtn.style.fontWeight = scope === "US" ? "bold" : "normal";
+					draw();
+				}
+
+				epBtn.addEventListener("click", () => setScope("EP"));
+				usBtn.addEventListener("click", () => setScope("US"));
+
+				draw();
+				slider.addEventListener("input", function () {
+					label.textContent = this.value;
+					draw();
+				});
+			});
+	})();
+</script>

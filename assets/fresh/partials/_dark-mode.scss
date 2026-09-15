@@ -94,6 +94,11 @@ html[data-theme="dark"] {
 		strong {
 			color: var(--text-color);
 		}
+		blockquote {
+			background-color: var(--card-bg);
+			color: var(--text-color);
+			border-left-color: var(--border-color);
+		}
 	}
 
 	// Cards

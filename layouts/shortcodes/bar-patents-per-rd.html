@@ -1,0 +1,128 @@
+<div style="max-width: 100%">
+	<canvas id="patents-per-rd-bar"></canvas>
+	<div style="text-align: center; margin-top: 0.75em;">
+		<button id="bar-scope-ep" class="scope-toggle" style="font-weight: bold;">EPO</button>
+		<button id="bar-scope-us" class="scope-toggle">USPTO</button>
+	</div>
+	<input
+		type="range"
+		id="bar-year-slider"
+		min="2006"
+		max="2023"
+		value="2023"
+		style="width: 100%; margin-top: 1em"
+	/>
+	<div style="text-align: center; font-weight: bold" id="bar-year-label">
+		2023
+	</div>
+</div>
+
+<script>
+	(function () {
+		{{ partial "sector-colors-eu.html" . | safeJS }}
+
+		let allData = [];
+		let chart;
+		let xMax;
+		let fixedOrder;
+		let currentScope = "EP";
+		const scopeLabel = { EP: "EPO", US: "USPTO" };
+
+		fetch("/data/bar_patents_per_rd.json")
+			.then((r) => r.json())
+			.then((data) => {
+				allData = data;
+
+				// computed across BOTH scopes combined, so toggling EP/US
+				// doesn't cause the axis or the bar ORDER to jump around
+				xMax = Math.ceil((Math.max(...data.map((d) => d.patents_per_rd)) * 1.1) / 0.2) * 0.2;
+
+				const averages = SECTOR_ORDER.map((sector) => {
+					const rows = data.filter((d) => d.sector === sector);
+					const avg = rows.length
+						? rows.reduce((sum, d) => sum + d.patents_per_rd, 0) / rows.length
+						: 0;
+					return { sector, avg, hasData: rows.length > 0 };
+				}).filter((d) => d.hasData);
+				averages.sort((a, b) => b.avg - a.avg);
+				fixedOrder = averages.map((d) => d.sector);
+
+				const slider = document.getElementById("bar-year-slider");
+				const label = document.getElementById("bar-year-label");
+				const ctx = document.getElementById("patents-per-rd-bar").getContext("2d");
+				const epBtn = document.getElementById("bar-scope-ep");
+				const usBtn = document.getElementById("bar-scope-us");
+
+				function draw() {
+					const year = parseInt(slider.value);
+					const filtered = allData.filter(
+						(d) => d.year === year && d.scope === currentScope
+					);
+
+					const values = fixedOrder.map((sector) => {
+						const row = filtered.find((d) => d.sector === sector);
+						return row ? row.patents_per_rd : 0;
+					});
+
+					if (chart) chart.destroy();
+					chart = new Chart(ctx, {
+						type: "bar",
+						data: {
+							labels: fixedOrder,
+							datasets: [
+								{
+									label: "Patents per €M R&D",
+									data: values,
+									backgroundColor: fixedOrder.map((sector) => colorForSector(sector)),
+								},
+							],
+						},
+						options: {
+							indexAxis: "y",
+							scales: {
+								x: {
+									min: 0,
+									max: xMax,
+									ticks: {
+										autoSkip: false,
+									},
+									afterBuildTicks: (axis) => {
+										axis.ticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
+											.filter((v) => v <= xMax)
+											.map((v) => ({ value: v }));
+									},
+								},
+							},
+							plugins: {
+								title: {
+									display: true,
+									text: `Patents per €1M of R&D, by Sector (${scopeLabel[currentScope]})`,
+									font: { size: 16 },
+								},
+								legend: { display: false },
+							},
+						},
+					});
+				}
+
+				function setScope(scope) {
+					currentScope = scope;
+					epBtn.style.fontWeight = scope === "EP" ? "bold" : "normal";
+					usBtn.style.fontWeight = scope === "US" ? "bold" : "normal";
+					draw();
+				}
+
+				epBtn.addEventListener("click", () => setScope("EP"));
+				usBtn.addEventListener("click", () => setScope("US"));
+
+				const initialYear = 2016;
+				slider.value = initialYear;
+				label.textContent = initialYear;
+				draw();
+				slider.addEventListener("input", function () {
+					label.textContent = this.value;
+					draw();
+				});
+			});
+	})();
+</script>
