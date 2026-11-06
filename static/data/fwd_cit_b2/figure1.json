@@ -1,0 +1,14 @@
+{
+  "electronics": {
+    "classes": ["H04W", "H04L", "G06F", "H04B", "H04N", "H04M", "H01L", "G05B", "G01S", "H04J", "H01H", "G02B"],
+    "fields": ["Wireless networks", "Digital information transmission", "Digital data processing", "Transmission", "Pictorial communication", "Telephonic communication", "Semiconductor devices", "Control and regulating systems", "Radio navigation and radar", "Multiplex communication", "Electric switches", "Optical elements and systems"],
+    "own": [17.27, 15.89, 4.39, 5.12, 1.53, 1.56, 1.73, 2.45, 1.74, 1.09, 2.23, 1.37],
+    "citing": [21.97, 17.98, 7.78, 6.86, 2.72, 1.9, 1.68, 0.95, 1.37, 1.91, 0.57, 1.05]
+  },
+  "health": {
+    "classes": ["A61K", "A61M", "C07D", "A61P", "A01N", "C12N", "A61F", "C07K", "A61B", "A01P", "C08G", "C07C"],
+    "fields": ["Medicinal preparations", "Devices for introducing media into the body", "Heterocyclic compounds", "Therapeutic activity of compounds", "Biocides and pesticides", "Microorganisms and enzymes", "Implants, prostheses, bandages", "Peptides", "Diagnosis and surgery", "Biocidal activity of compounds", "Macromolecular compounds", "Acyclic and carbocyclic compounds"],
+    "own": [10.49, 9.02, 9.48, 6.73, 6.97, 5.95, 5.12, 3.38, 2.59, 2.89, 3.17, 2.6],
+    "citing": [10.67, 9.25, 7.66, 6.57, 5.59, 4.88, 3.73, 3.52, 3.56, 2.82, 2.09, 1.94]
+  }
+}

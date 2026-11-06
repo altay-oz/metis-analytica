@@ -1,0 +1,18 @@
+{
+  "electronics": {
+    "classes": ["H04N", "G06F", "H04J", "H04B", "H04W", "H04M", "G06K", "H04L", "F21V", "F01D", "G05B", "H01B", "H02H", "H01R", "H01H", "H02G"],
+    "fields": ["Pictorial communication", "Digital data processing", "Multiplex communication", "Transmission", "Wireless networks", "Telephonic communication", "Recognition of data", "Digital information transmission", "Lighting devices", "Turbines", "Control and regulating systems", "Cables, conductors, insulators", "Protective circuit arrangements", "Electric connectors", "Electric switches", "Installation of cables and lines"],
+    "own": [1.53, 4.39, 1.09, 5.12, 17.27, 1.56, 0.84, 15.89, 0.85, 1.3, 2.45, 0.78, 0.8, 1.01, 2.23, 0.8],
+    "citing": [2.72, 7.78, 1.91, 6.86, 21.97, 1.9, 0.96, 17.98, 0.34, 0.51, 0.95, 0.28, 0.29, 0.35, 0.57, 0.19],
+    "ratio": [1.78, 1.77, 1.75, 1.34, 1.27, 1.21, 1.14, 1.13, 0.4, 0.39, 0.39, 0.36, 0.36, 0.35, 0.26, 0.24],
+    "min_own_share": 0.7
+  },
+  "health": {
+    "classes": ["A61B", "G01N", "A61N", "C12Q", "G16H", "C12P", "C08L", "C08K", "C09D", "C12N", "C07D", "A01N", "C07C", "A61F", "A61L", "C08G"],
+    "fields": ["Diagnosis and surgery", "Analysis of materials", "Electrotherapy and radiation therapy", "Tests involving enzymes or nucleic acids", "Healthcare informatics", "Fermentation or enzyme-using processes", "Compositions of macromolecular compounds", "Compounding ingredients", "Coating compositions", "Microorganisms and enzymes", "Heterocyclic compounds", "Biocides and pesticides", "Acyclic and carbocyclic compounds", "Implants, prostheses, bandages", "Sterilisation, materials for implants", "Macromolecular compounds"],
+    "own": [2.59, 1.82, 0.99, 1.3, 0.87, 1.43, 1.14, 0.77, 1.13, 5.95, 9.48, 6.97, 2.6, 5.12, 1.69, 3.17],
+    "citing": [3.56, 2.36, 1.22, 1.56, 0.98, 1.52, 1.21, 0.8, 0.99, 4.88, 7.66, 5.59, 1.94, 3.73, 1.2, 2.09],
+    "ratio": [1.38, 1.29, 1.23, 1.2, 1.12, 1.07, 1.06, 1.04, 0.87, 0.82, 0.81, 0.8, 0.74, 0.73, 0.71, 0.66],
+    "min_own_share": 0.7
+  }
+}

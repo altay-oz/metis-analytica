@@ -1,0 +1,284 @@
+{{- /* Usage in a post:  {{< citfig fig="1" >}}   (fig = 1, 2 or 3)
+       Reads static/data/fwd_cit_b2/figure<fig>.json (folder can be changed with src="/data/other").
+       Chart.js 4 must already be loaded by the theme, as in the other posts. */ -}}
+{{- $fig := .Get "fig" -}}
+{{- $src := .Get "src" | default "/data/fwd_cit_b2" -}}
+<style>
+	.citfig-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 100%; }
+	@media (min-width: 52rem) { .citfig-grid { grid-template-columns: 1fr 1fr; } }
+	.citfig-panel { min-width: 0; }
+	.citfig-title { font-weight: bold; margin-bottom: 0.4em; color: var(--citfig-text, inherit); }
+	.citfig-box { position: relative; margin-bottom: 0.75em; }
+	.citfig-note { font-size: 0.85em; margin: 0.25em 0 0; color: var(--citfig-text, inherit); }
+	/* table header text follows the readable colour chosen below, in light and dark mode */
+	table th { color: var(--citfig-text, inherit) !important; opacity: 1 !important; }
+</style>
+<script>
+	// Shared by all figures on the page: picks readable colours from the real page
+	// background (not from the theme's text colour) and redraws when the mode changes.
+	window.CITFIG = window.CITFIG || (function () {
+		const api = { palette: null, callbacks: [] };
+
+		function backgroundOf(el) {
+			while (el) {
+				const m = getComputedStyle(el).backgroundColor.match(/rgba?\(([^)]+)\)/);
+				if (m) {
+					const p = m[1].split(",").map(parseFloat);
+					if ((p.length > 3 ? p[3] : 1) > 0.05) return p;
+				}
+				el = el.parentElement;
+			}
+			return [255, 255, 255];
+		}
+
+		function compute() {
+			const bg = backgroundOf(document.body);
+			const dark = (0.299 * bg[0] + 0.587 * bg[1] + 0.114 * bg[2]) / 255 < 0.5;
+			api.palette = dark
+				? { mode: "dark", text: "#e8e8e8", grid: "rgba(255,255,255,0.18)",
+				    own: "#a3a8b0", citing: "#56B4E9", down: "#E8854A",
+				    lines: ["#56B4E9", "#F0B429", "#2FC9A0", "#E8A0CC", "#B7DDF7"] }
+				: { mode: "light", text: "#1b1f23", grid: "rgba(0,0,0,0.14)",
+				    own: "#7b8089", citing: "#0072B2", down: "#C25400",
+				    lines: ["#0072B2", "#C98A00", "#007A5A", "#B5527F", "#2E8FC9"] };
+			document.documentElement.style.setProperty("--citfig-text", api.palette.text);
+		}
+
+		function refresh() {
+			const before = api.palette && api.palette.mode;
+			compute();
+			if (before !== api.palette.mode) api.callbacks.forEach((f) => f());
+		}
+		function refreshSoon() { setTimeout(refresh, 60); setTimeout(refresh, 450); }
+
+		compute();
+		const opts = { attributes: true, attributeFilter: ["class", "data-theme", "data-mode", "style"] };
+		new MutationObserver(refreshSoon).observe(document.documentElement, opts);
+		new MutationObserver(refreshSoon).observe(document.body, opts);
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", refreshSoon);
+		return api;
+	})();
+</script>
+<div class="citfig-grid" id="citfig-{{ $fig }}"></div>
+
+<script>
+	(function () {
+		const grid = document.getElementById("citfig-{{ $fig }}");
+		if (!window.CITFIG || typeof Chart === "undefined") {
+			grid.textContent = "The figure could not be drawn: Chart.js is not loaded on this page.";
+			return;
+		}
+		const GROUPS = ["electronics", "health"];
+		const TITLES = { electronics: "Electronics", health: "Health" };
+		const charts = [];
+		let C = window.CITFIG.palette;
+		let cache = null;
+
+		function applyDefaults() {
+			C = window.CITFIG.palette;
+			Chart.defaults.color = C.text;
+			Chart.defaults.borderColor = C.grid;
+			Chart.defaults.font.size = 13;
+			Chart.defaults.maintainAspectRatio = false;
+		}
+		function mk(canvas, config) {
+			const chart = new Chart(canvas, config);
+			charts.push(chart);
+			return chart;
+		}
+		function redraw() {
+			if (!cache) return;
+			charts.splice(0).forEach((c) => c.destroy());
+			grid.innerHTML = "";
+			applyDefaults();
+			draw(cache);
+		}
+		window.CITFIG.callbacks.push(redraw);
+		applyDefaults();
+
+		// one panel per group: a title and one or more chart boxes; returns the canvases
+		function panel(group, heights, ariaLabel) {
+			const wrap = document.createElement("div");
+			wrap.className = "citfig-panel";
+			const title = document.createElement("div");
+			title.className = "citfig-title";
+			title.textContent = TITLES[group];
+			wrap.appendChild(title);
+			const canvases = heights.map(function (h) {
+				const box = document.createElement("div");
+				box.className = "citfig-box";
+				box.style.height = h + "px";
+				const c = document.createElement("canvas");
+				c.setAttribute("role", "img");
+				c.setAttribute("aria-label", TITLES[group] + ": " + ariaLabel);
+				box.appendChild(c);
+				wrap.appendChild(box);
+				return c;
+			});
+			grid.appendChild(wrap);
+			return canvases;
+		}
+		const axisTitle = (text) => ({ display: true, text: text });
+
+		{{ if eq $fig "1" -}}
+		// Figure 1: own share and citing share of the twelve largest classes
+		function draw(data) {
+			GROUPS.forEach(function (g) {
+				const d = data[g];
+				const c = panel(g, [440], "share of the largest IPC classes among own patents and citing families")[0];
+				mk(c, {
+					type: "bar",
+					data: {
+						labels: d.classes,
+						datasets: [
+							{ label: "Own patents", data: d.own, backgroundColor: C.own },
+							{ label: "Citing families", data: d.citing, backgroundColor: C.citing },
+						],
+					},
+					options: {
+						indexAxis: "y",
+						plugins: {
+							legend: { position: "bottom" },
+							tooltip: {
+								callbacks: {
+									title: (items) => d.classes[items[0].dataIndex] + ": " + d.fields[items[0].dataIndex],
+									label: (ctx) => ctx.dataset.label + ": " + ctx.parsed.x.toFixed(1) + "%",
+								},
+							},
+						},
+						scales: { x: { beginAtZero: true, title: axisTitle("Share of IPC class assignments (%)") } },
+					},
+				});
+			});
+		}
+		{{- else if eq $fig "2" -}}
+		// Figure 2: ratio of citing share to own share, drawn as distance from 1
+		function draw(data) {
+			const fg = C.text;
+			GROUPS.forEach(function (g) {
+				const d = data[g];
+				const c = panel(g, [480], "ratio of citing share to own share by IPC class")[0];
+				mk(c, {
+					type: "bar",
+					data: {
+						labels: d.classes,
+						datasets: [
+							{
+								label: "Ratio",
+								data: d.ratio.map((r) => [1, r]),
+								backgroundColor: d.ratio.map((r) => (r >= 1 ? C.citing : C.down)),
+							},
+						],
+					},
+					options: {
+						indexAxis: "y",
+						plugins: {
+							legend: { display: false },
+							tooltip: {
+								callbacks: {
+									title: (items) => d.classes[items[0].dataIndex] + ": " + d.fields[items[0].dataIndex],
+									label: (ctx) => [
+										"Ratio: " + d.ratio[ctx.dataIndex].toFixed(2),
+										"Own patents: " + d.own[ctx.dataIndex].toFixed(1) + "%",
+										"Citing families: " + d.citing[ctx.dataIndex].toFixed(1) + "%",
+									],
+								},
+							},
+						},
+						scales: {
+							x: {
+								min: 0,
+								max: 2,
+								ticks: { stepSize: 0.5, callback: (v) => +Number(v).toFixed(2) },
+								title: axisTitle("Citing share divided by own share (1 = same weight)"),
+								grid: {
+									color: (ctx) => (ctx.tick && ctx.tick.value === 1 ? fg : Chart.defaults.borderColor),
+									lineWidth: (ctx) => (ctx.tick && ctx.tick.value === 1 ? 2 : 1),
+								},
+							},
+						},
+					},
+				});
+			});
+		}
+		{{- else -}}
+		// Figure 3: class shares by priority year (to 2019) and citing families per cohort
+		function draw(data) {
+			GROUPS.forEach(function (g) {
+				const d = data[g];
+				const cv = panel(g, [320, 150], "share of citing families carrying selected IPC classes by priority year, and number of citing families per year");
+				const keys = Object.keys(d.series);
+				mk(cv[0], {
+					type: "line",
+					data: {
+						labels: d.years,
+						datasets: keys.map((k, i) => ({
+							label: k + " " + d.fields[k],
+							data: d.series[k],
+							borderColor: C.lines[i % C.lines.length],
+							backgroundColor: C.lines[i % C.lines.length],
+							borderWidth: 2,
+							pointRadius: 2,
+							tension: 0.15,
+						})),
+					},
+					options: {
+						interaction: { mode: "index", intersect: false },
+						plugins: {
+							legend: { position: "bottom", labels: { boxWidth: 12 } },
+							tooltip: { callbacks: { label: (ctx) => ctx.dataset.label + ": " + ctx.parsed.y.toFixed(1) + "%" } },
+						},
+						scales: {
+							y: { beginAtZero: true, title: axisTitle("Citing families carrying the class (%)") },
+							x: { title: axisTitle("Priority year of the cited patents") },
+						},
+					},
+				});
+				const cf = d.citing_families;
+				mk(cv[1], {
+					type: "bar",
+					data: {
+						labels: cf.years,
+						datasets: [
+							{
+								label: "Citing families",
+								data: cf.total,
+								backgroundColor: cf.years.map((y) => (y <= cf.complete_through ? C.citing : "rgba(128,128,128,0.5)")),
+							},
+						],
+					},
+					options: {
+						plugins: {
+							legend: { display: false },
+							tooltip: { callbacks: { label: (ctx) => ctx.parsed.y.toLocaleString("en-US") + " citing families" } },
+						},
+						scales: {
+							y: { beginAtZero: true, title: axisTitle("Citing families") },
+							x: { title: axisTitle("Priority year of the cited patents") },
+						},
+					},
+				});
+			});
+			if (document.getElementById("citfig-note-3")) return;
+			const note = document.createElement("p");
+			note.id = "citfig-note-3";
+			note.className = "citfig-note";
+			note.textContent = "Lower bars: number of citing families per cohort. Grey bars are cohorts after " + data.electronics.citing_families.complete_through + ", whose four-year window is incomplete.";
+			grid.parentNode.insertBefore(note, grid.nextSibling);
+		}
+		{{- end }}
+
+		fetch({{ printf "%s/figure%s.json" $src $fig | relURL }})
+			.then((r) => {
+				if (!r.ok) throw new Error(r.status);
+				return r.json();
+			})
+			.then((data) => {
+				cache = data;
+				draw(data);
+			})
+			.catch((e) => {
+				grid.textContent = "The figure data could not be loaded (" + e.message + ").";
+			});
+	})();
+</script>
