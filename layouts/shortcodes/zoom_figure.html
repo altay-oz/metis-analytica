@@ -1,0 +1,177 @@
+<figure class="zoomfig">
+	<img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy" />
+	{{- with .Get "caption" }}
+	<figcaption>{{ . | markdownify }}</figcaption>
+	{{- end }}
+</figure>
+{{- if not (.Page.Scratch.Get "zoomfig-assets") -}}
+{{- .Page.Scratch.Set "zoomfig-assets" true -}}
+<style>
+	figure.zoomfig img {
+		cursor: zoom-in;
+	}
+	.zf-overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 99999;
+		display: flex;
+		overflow: auto;
+		background: #fff;
+		color: #111;
+	}
+	.zf-overlay img {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		cursor: zoom-in;
+	}
+	.zf-overlay.zf-actual img {
+		max-width: none;
+		max-height: none;
+		cursor: zoom-out;
+	}
+	.zf-bar {
+		position: fixed;
+		top: 0.8rem;
+		right: 1.2rem;
+		z-index: 100000;
+		display: flex;
+		gap: 0.5rem;
+	}
+	.zf-bar button,
+	.zf-bar a {
+		font: inherit;
+		font-size: 0.9rem;
+		color: inherit;
+		background: rgba(128, 128, 128, 0.25);
+		border: 1px solid rgba(128, 128, 128, 0.6);
+		border-radius: 4px;
+		padding: 0.3em 0.8em;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	.zf-bar button:hover,
+	.zf-bar a:hover {
+		background: rgba(128, 128, 128, 0.45);
+	}
+</style>
+<script>
+	(function () {
+		var overlay = null;
+		var previousOverflow = "";
+
+		function close() {
+			if (!overlay) return;
+			if (document.fullscreenElement && document.exitFullscreen) {
+				document.exitFullscreen();
+			}
+			document.body.style.overflow = previousOverflow;
+			document.removeEventListener("keydown", onKey);
+			overlay.remove();
+			overlay = null;
+		}
+
+		function toggleFullscreen() {
+			if (!overlay) return;
+			if (document.fullscreenElement) {
+				document.exitFullscreen();
+			} else if (overlay.requestFullscreen) {
+				overlay.requestFullscreen();
+			}
+		}
+
+		function onKey(event) {
+			if (event.key === "Escape") close();
+			if (event.key === "f" || event.key === "F") toggleFullscreen();
+		}
+
+		function button(label, handler) {
+			var b = document.createElement("button");
+			b.type = "button";
+			b.textContent = label;
+			b.addEventListener("click", function (event) {
+				event.stopPropagation();
+				handler();
+			});
+			return b;
+		}
+
+		function pageColors(start) {
+			var background = "";
+			var node = start;
+			while (node && node.nodeType === 1) {
+				var value = getComputedStyle(node).backgroundColor;
+				if (value && value !== "transparent" && !/rgba\(.*,\s*0\)$/.test(value)) {
+					background = value;
+					break;
+				}
+				node = node.parentElement;
+			}
+			return {
+				background: background || "#fff",
+				color: getComputedStyle(start).color
+			};
+		}
+
+		function open(src, alt, origin) {
+			if (overlay) return;
+			overlay = document.createElement("div");
+			overlay.className = "zf-overlay";
+			var colors = pageColors(origin);
+			overlay.style.background = colors.background;
+			overlay.style.color = colors.color;
+			overlay.setAttribute("role", "dialog");
+			overlay.setAttribute("aria-modal", "true");
+
+			var img = document.createElement("img");
+			img.src = src;
+			img.alt = alt || "";
+			img.addEventListener("click", function (event) {
+				event.stopPropagation();
+				overlay.classList.toggle("zf-actual");
+			});
+
+			var bar = document.createElement("div");
+			bar.className = "zf-bar";
+			var link = document.createElement("a");
+			link.href = src;
+			link.target = "_blank";
+			link.rel = "noopener";
+			link.textContent = "Open in new tab";
+			link.addEventListener("click", function (event) {
+				event.stopPropagation();
+			});
+			bar.appendChild(link);
+			bar.appendChild(button("Full screen (F)", toggleFullscreen));
+			bar.appendChild(button("Close (Esc)", close));
+
+			overlay.addEventListener("click", close);
+			overlay.appendChild(img);
+			overlay.appendChild(bar);
+			previousOverflow = document.body.style.overflow;
+			document.body.style.overflow = "hidden";
+			document.body.appendChild(overlay);
+			document.addEventListener("keydown", onKey);
+		}
+
+		function init() {
+			document.querySelectorAll("figure.zoomfig img").forEach(function (img) {
+				img.addEventListener("click", function () {
+					open(img.currentSrc || img.src, img.alt, img);
+				});
+			});
+		}
+
+		if (document.readyState === "loading") {
+			document.addEventListener("DOMContentLoaded", init);
+		} else {
+			init();
+		}
+	})();
+</script>
+{{- end -}}

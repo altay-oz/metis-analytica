@@ -1,0 +1,131 @@
+<div class="sortable-wrap">{{ .Inner | markdownify }}</div>
+{{- if not (.Page.Scratch.Get "sortable-assets") -}} {{- .Page.Scratch.Set
+"sortable-assets" true -}}
+<style>
+	.sortable-wrap table {
+		background: transparent;
+		color: inherit !important;
+		border-collapse: collapse;
+	}
+	.sortable-wrap table th,
+	.sortable-wrap table td {
+		color: inherit !important;
+		background: transparent;
+		border: 1px solid rgba(128, 128, 128, 0.35);
+		padding: 0.4em 0.8em;
+	}
+	.sortable-wrap table thead th {
+		color: inherit !important;
+		background: rgba(128, 128, 128, 0.18);
+		cursor: pointer;
+		user-select: none;
+		white-space: nowrap;
+	}
+	.sortable-wrap table thead th:hover,
+	.sortable-wrap table thead th:focus-visible {
+		background: rgba(128, 128, 128, 0.32);
+		outline: none;
+	}
+	.sortable-wrap table thead th::after {
+		content: "\2195";
+		margin-left: 0.4em;
+		opacity: 0.4;
+	}
+	.sortable-wrap table thead th[aria-sort="ascending"]::after {
+		content: "\25B2";
+		opacity: 1;
+	}
+	.sortable-wrap table thead th[aria-sort="descending"]::after {
+		content: "\25BC";
+		opacity: 1;
+	}
+	.sortable-wrap {
+		margin: 1.5em 0 2em;
+		overflow-x: auto;
+	}
+	.sortable-wrap table {
+		margin-bottom: 0;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: auto !important;
+	}
+	.sortable-wrap table tbody tr:last-child td {
+		border-bottom: 1px solid rgba(128, 128, 128, 0.35) !important;
+	}
+</style>
+<script>
+	(function () {
+		var numberPattern = /^-?\d+([.,]\d+)?$/;
+
+		function cellText(row, index) {
+			return row.cells[index].textContent.trim();
+		}
+
+		function init() {
+			var tables = document.querySelectorAll(".sortable-wrap table");
+			console.log("sortable_table: " + tables.length + " table(s) found");
+			Array.prototype.forEach.call(tables, function (table) {
+				var body = table.tBodies[0];
+				var head = table.tHead ? table.tHead.rows[0] : table.rows[0];
+				if (!head || !body) return;
+
+				Array.prototype.forEach.call(head.cells, function (th, index) {
+					th.tabIndex = 0;
+					th.setAttribute("aria-sort", "none");
+
+					function sortByColumn() {
+						var direction =
+							th.getAttribute("aria-sort") === "ascending"
+								? "descending"
+								: "ascending";
+						Array.prototype.forEach.call(head.cells, function (other) {
+							other.setAttribute("aria-sort", "none");
+						});
+						th.setAttribute("aria-sort", direction);
+
+						var rows = Array.prototype.slice
+							.call(body.rows)
+							.filter(function (row) {
+								return row !== head;
+							});
+						var numeric = rows.every(function (row) {
+							return numberPattern.test(cellText(row, index));
+						});
+
+						rows.sort(function (a, b) {
+							var x = cellText(a, index);
+							var y = cellText(b, index);
+							var result = numeric
+								? parseFloat(x.replace(",", ".")) -
+									parseFloat(y.replace(",", "."))
+								: x.localeCompare(y, undefined, {
+										numeric: true,
+										sensitivity: "base",
+									});
+							return direction === "ascending" ? result : -result;
+						});
+
+						rows.forEach(function (row) {
+							body.appendChild(row);
+						});
+					}
+
+					th.addEventListener("click", sortByColumn);
+					th.addEventListener("keydown", function (event) {
+						if (event.key === "Enter" || event.key === " ") {
+							event.preventDefault();
+							sortByColumn();
+						}
+					});
+				});
+			});
+		}
+
+		if (document.readyState === "loading") {
+			document.addEventListener("DOMContentLoaded", init);
+		} else {
+			init();
+		}
+	})();
+</script>
+{{- end -}}

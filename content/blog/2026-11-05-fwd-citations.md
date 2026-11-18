@@ -25,7 +25,6 @@ Economy*](https://mitpress.mit.edu/9780262600651/patents-citations-and-innovatio
 (MIT Press), treats citations as traces of knowledge flows between
 inventors.
 
-
 > A patent count shows how much a firm or an industry files. Forward
 > citations show who builds on that technology later, and from which
 > fields. For a company, this points to the neighbouring fields that
@@ -259,7 +258,7 @@ value.
   are not separated. Matching the citing names with the groups’ own
   applicant names gives a lower bound of 2.0% of the citing families
   in electronics and 1.0% in health, so self-citation is small in
-  these data. [do we need it, if so, then a simple explication]
+  these data.
 - **Corporate changes.** Applicant names follow the legal entity at
   filing. Turbine classes almost disappear from the electronics own
   patents after 2016 (F01D assignments fall from 63 in 2015 to 7 in
