@@ -1,0 +1,23 @@
+<div class="post-abstract">{{ .Inner | markdownify }}</div>
+{{- if not (.Page.Scratch.Get "abstract-assets") -}} {{- .Page.Scratch.Set
+"abstract-assets" true -}}
+<style>
+	.post-abstract {
+		margin: 1.5em clamp(0.5rem, 5vw, 3rem) 2em;
+		padding: 0.9em 1.3em;
+		background: rgba(0, 146, 188, 0.1);
+		border-left: 4px solid rgba(0, 146, 188, 0.5);
+		border-radius: 6px;
+		color: inherit !important;
+	}
+	.post-abstract p {
+		margin: 0;
+		color: inherit !important;
+		font-size: 0.97em;
+		line-height: 1.55;
+	}
+	.post-abstract strong {
+		color: inherit !important;
+	}
+</style>
+{{- end -}}

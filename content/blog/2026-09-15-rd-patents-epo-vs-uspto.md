@@ -8,6 +8,23 @@ include_footer: true
 sidebar: false
 ---
 
+{{< abstract >}}
+
+**Abstract.** This post revisits the question of whether R&D spending
+buys patents, following Griliches's 1990 survey of patent statistics
+as economic indicators. Using
+[TechLand](https://www.metis-analytica.com/techlandfeatures), the
+patent counts of 197 of Europe's largest R&D spenders are joined to
+their R&D expenditure from the EU Industrial R&D Investment
+Scoreboard, at the European Patent Office and at the USPTO. R&D and
+patents are clearly related, with an average R² of 0.45 at the EPO and
+0.59 at the USPTO, below the value of Griliches's broader sample. The
+ratio of patents to R&D also differs strongly between industries and
+between patent offices.
+
+{{< /abstract >}}
+
+
 Patent data can tell you far more than who owns which invention.
 Analyzed in bulk, across companies, technologies, and time, it
 reveals:

@@ -5,6 +5,23 @@ description: "A citation network view of the patents of EU electronics R&D inves
 tags: ["patents", "citation network analysis", "Gephi", "TechLand", "electronics"]
 ---
 
+{{< abstract >}} 
+
+Abstract. This post shows how citation networks give another view of
+the technology landscape. For this purpose, the patent data comes from
+[TechLand](https://www.metis-analytica.com/techlandfeatures) and the
+firms are the EU electronics firms (n=35) that appear in at least 18
+of the 20 editions of the EU Industrial R&D Investment Scoreboard from
+2006 to 2025. The networks are built from patent families and their
+forward and backward citations, grouped by IPC class and by applicant,
+and measured with PageRank, betweenness and modularity. The analysis
+shows that citation counts and network position do not always agree,
+and that many of the most central applicants around these EU firms are
+global multinationals.
+
+{{< /abstract >}}
+
+
 A high citation count does not tell the same thing as a central
 position in the citation network built from patent references. Patents
 and their citations can also be grouped by applicant, inventor, IPC
@@ -21,17 +38,8 @@ Industrial R&D Investment
 Scoreboard](https://iri.jrc.ec.europa.eu/data), which ranks the top EU
 R&D investors each year. I kept firms that appear in at least 18 of
 the 20 editions from 2006 to 2025, so the groups consist of persistent
-R&D investors. This post analyzes the patents of the electronics firms
-only.
-
-> This post uses the patents of the electronics firms from the EU
-> Industrial R&D Investment Scoreboard. The patent data comes from
-> TechLand, and the citation network analysis groups the patents by
-> IPC class and by applicant name. The analysis shows the position of
-> each technology class and each applicant within the network of
-> knowledge flows built from patent citations. This analysis gives
-> another view of the technology landscape of top EU R&D investor
-> firms in electronics.
+R&D investors. This post analyzes the patents of the 35 electronics
+firms only.
 
 A citation network starts from the reference section of each patent.
 Its entries are either other patents or non-patent literature,
@@ -288,5 +296,6 @@ In the next posts I will show how to interpret these results for
 strategic questions, such as those of technology transfer offices,
 venture capital investors, technology managers and M&A teams.
 
-If you would like a similar view for your sector or your portfolio,
-you can contact us or send me a message on LinkedIn.
+If you work with patent data and want to explore something like this
+for your own sector or portfolio, [contact us](/#section5) or [DM me
+on LinkedIn](https://www.linkedin.com/in/altayoz).

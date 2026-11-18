@@ -5,7 +5,25 @@ description: "Who cites the patents of Europe's persistent R&D investors? A comp
 tags: ["patents", "forward citations", "PATSTAT", "R&D", "TechLand"]
 ---
 
-## From counting patents to following their forward citations
+
+{{< abstract >}}
+
+**Abstract.** This post compares where the forward citations of
+patents come from in two groups of EU firms, one in electronics and
+one in health. Using
+[TechLand](https://www.metis-analytica.com/techlandfeatures), the
+patent families of these firms are matched with the families that cite
+them within four years, and the citing families are described by IPC
+class and by applicant. The firms are persistent R&D investors of the
+EU Industrial R&D Investment Scoreboard, present in at least 18 of the
+20 editions from 2006 to
+2025. Electronics patents are cited mostly by other electronics and
+computing patents, while health patents are also cited from
+diagnostics, surgery and analysis. The figures describe where citations
+land, not how much a technology is worth.
+
+{{< /abstract >}}
+
 
 Counting patents tells us how much a firm patents, but not whether
 anyone builds on those patents. In the first post of this series, I
