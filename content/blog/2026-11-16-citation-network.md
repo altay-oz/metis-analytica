@@ -79,8 +79,8 @@ contain. In this post the first network groups them by IPC class and
 the second by applicant name. Each group is treated as a node. Two
 nodes are linked when patents of one cite patents of the other, and
 the link is heavier (edge weight) when this happens often. TechLand
-shows the network and also exports the links as a table, and Gephi
-turns the table into a picture.
+shows the network and also exports the links as a table, and
+[Gephi](https://gephi.org) turns the table into a picture.
 
 The practical steps are short. The network data is exported from
 TechLand and several measures are calculated in Gephi: PageRank for
